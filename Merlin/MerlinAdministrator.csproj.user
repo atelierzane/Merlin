@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ConfigurationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\DialogWindowTitleBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CatalogExportPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CatalogManagerPages\AddProductPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CatalogManagerPages\CatalogSearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CatalogManagerPages\EditProductBulk.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CatalogManagerPages\EditProductPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CatalogManagerPages\RemoveProductBulkPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CatalogManagerPages\RemoveProductPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\DataMigrationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\DepartmentManagerPages\AddDepartmentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\DepartmentManagerPages\EditDepartmentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\DepartmentManagerPages\ViewDepartmentsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\EmployeeManagerPages\AddEmployeePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\EmployeeManagerPages\EditEmployeePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\EmployeeManagerPages\EmployeeSearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\EmployeeManagerPages\RemoveEmployeePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\InventoryManagerPages\CartonCreationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\InventoryManagerPages\CartonSearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\InventoryManagerPages\EditCartonPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\InventoryManagerPages\InventorySearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\InventoryManagerPages\RemoveCartonBulkPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\InventoryManagerPages\RemoveCartonPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\KPIManagerPages\AddKPIPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\KPIManagerPages\KPISearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\CatalogManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\DepartmentManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\EmployeeManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\InventoryManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\KPIManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\LocationManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\LoyaltyManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\OrganizationManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\PayrollLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\PromotionManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\ServicesManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LandingPages\VendorManagerLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LocationManagerPages\AddLocationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LocationManagerPages\EditLocationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LocationManagerPages\LocationSearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LocationManagerPages\RemoveLocationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LoyaltyManagerPages\LoyaltySearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\MigrationDashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OrganizationManagerPages\AddDistrictPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OrganizationManagerPages\AddDivisionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OrganizationManagerPages\AddMarketPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OrganizationManagerPages\AddRegionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OrganizationManagerPages\EditDistrictPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OrganizationManagerPages\EditDivisionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OrganizationManagerPages\EditMarketPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OrganizationManagerPages\EditRegionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OrganizationManagerPages\OrganizationChart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PayrollPages\AllocateHoursPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PromotionManagerPages\AddComboPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LoyaltyManagerPages\AddLoyaltyPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PromotionManagerPages\AddPromotionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PromotionManagerPages\ComboSearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PromotionManagerPages\EditComboPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PromotionManagerPages\EditPromotionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PromotionManagerPages\PromotionSearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PromotionManagerPages\RemoveComboBulkPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PromotionManagerPages\RemoveComboPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PromotionManagerPages\RemovePromotionBulkPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PromotionManagerPages\RemovePromotionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ServicesManagerPages\AddServiceAddOnsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ServicesManagerPages\AddServiceFeePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ServicesManagerPages\AddServicePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ServicesManagerPages\RemoveServiceBulkPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ServicesManagerPages\ServiceSearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\VendorManagerPages\AddVendorPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\VendorManagerPages\EditVendorPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\VendorManagerPages\RemoveVendorPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\VendorManagerPages\VendorSearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RibbonTestWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ConfigurationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\DialogWindowTitleBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CatalogExportPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CatalogManagerPages\AddProductPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CatalogManagerPages\CatalogSearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CatalogManagerPages\EditProductBulk.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CatalogManagerPages\EditProductPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CatalogManagerPages\RemoveProductBulkPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CatalogManagerPages\RemoveProductPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\DataMigrationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\DepartmentManagerPages\AddDepartmentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\DepartmentManagerPages\EditDepartmentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\DepartmentManagerPages\ViewDepartmentsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\EmployeeManagerPages\AddEmployeePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\EmployeeManagerPages\EditEmployeePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\EmployeeManagerPages\EmployeeSearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\EmployeeManagerPages\RemoveEmployeePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\InventoryManagerPages\CartonCreationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\InventoryManagerPages\CartonSearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\InventoryManagerPages\EditCartonPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\InventoryManagerPages\InventorySearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\InventoryManagerPages\RemoveCartonBulkPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\InventoryManagerPages\RemoveCartonPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\KPIManagerPages\AddKPIPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\KPIManagerPages\KPISearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\CatalogManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\DepartmentManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\EmployeeManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\InventoryManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\KPIManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\LocationManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\LoyaltyManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\OrganizationManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\PayrollLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\PromotionManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\ServicesManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LandingPages\VendorManagerLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LocationManagerPages\AddLocationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LocationManagerPages\EditLocationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LocationManagerPages\LocationSearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LocationManagerPages\RemoveLocationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LoyaltyManagerPages\LoyaltySearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\MigrationDashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OrganizationManagerPages\AddDistrictPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OrganizationManagerPages\AddDivisionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OrganizationManagerPages\AddMarketPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OrganizationManagerPages\AddRegionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OrganizationManagerPages\EditDistrictPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OrganizationManagerPages\EditDivisionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OrganizationManagerPages\EditMarketPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OrganizationManagerPages\EditRegionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OrganizationManagerPages\OrganizationChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PayrollPages\AllocateHoursPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PromotionManagerPages\AddComboPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LoyaltyManagerPages\AddLoyaltyPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PromotionManagerPages\AddPromotionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PromotionManagerPages\ComboSearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PromotionManagerPages\EditComboPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PromotionManagerPages\EditPromotionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PromotionManagerPages\PromotionSearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PromotionManagerPages\RemoveComboBulkPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PromotionManagerPages\RemoveComboPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PromotionManagerPages\RemovePromotionBulkPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PromotionManagerPages\RemovePromotionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ServicesManagerPages\AddServiceAddOnsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ServicesManagerPages\AddServiceFeePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ServicesManagerPages\AddServicePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ServicesManagerPages\RemoveServiceBulkPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ServicesManagerPages\ServiceSearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\VendorManagerPages\AddVendorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\VendorManagerPages\EditVendorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\VendorManagerPages\RemoveVendorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\VendorManagerPages\VendorSearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RibbonTestWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\Colors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\TextStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

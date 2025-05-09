@@ -1,0 +1,184 @@
+﻿<Page x:Class="MerlinAdministrator.Pages.CatalogManagerPages.AddProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="AddProductPage"
+      Height="730">
+
+    <Border CornerRadius="7,7,5,5" Margin="5,10,5,5">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#C9C9C9" Offset="0"/>
+                <GradientStop Color="#B1B1B1" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Border Grid.Row="0" CornerRadius="5,5,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="{StaticResource HeaderGradientStop1}" Offset="0"/>
+                        <GradientStop Color="{StaticResource HeaderGradientStop2}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="4" Opacity=".5" Direction="275" ShadowDepth="2" />
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Add Product" Style="{StaticResource PageHeaderTitle}" Margin="10,10,10,5" />
+                    <TextBlock Text="Enter product details below. Variants and additional attributes can be configured as needed."
+                               Style="{StaticResource PageHeaderText}" Margin="10,0,0,0" />
+                </StackPanel>
+            </Border>
+
+            <!-- Scrollable Main Content -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="10">
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Product Name:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5" />
+                        <TextBox x:Name="ProductNameTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" Width="1155" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Product Category/Department:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5" />
+                        <ComboBox Name="CategoryIDComboBox"
+                                  Style="{StaticResource LightMinimalistComboBoxStyle}"
+                                  Width="1155"
+                                  HorizontalAlignment="Left"
+                                  Margin="5,0,0,0"
+                                  SelectedValuePath="CategoryID"
+                                  SelectionChanged="CategoryIDComboBox_SelectionChanged">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding CategoryID}" Width="50" />
+                                        <TextBlock Text=" - " />
+                                        <TextBlock Text="{Binding CategoryName}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Price:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5" />
+                        <TextBox x:Name="ProductPriceTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" Width="1155" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Cost:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5" />
+                        <TextBox x:Name="CostTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" Width="1155" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Vendor:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5" />
+                        <ComboBox Name="VendorComboBox"
+                                  Style="{StaticResource LightMinimalistComboBoxStyle}"
+                                  Width="1155"
+                                  HorizontalAlignment="Left"
+                                  Margin="5,0,0,0"
+                                  SelectedValuePath="VendorID">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding VendorID}" Width="75"/>
+                                        <TextBlock Text=" - " />
+                                        <TextBlock Text="{Binding VendorName}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0" Name="TradeValuePanel" Visibility="Collapsed">
+                        <TextBlock Text="Trade Value:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5" />
+                        <TextBox x:Name="TradeValueTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" Width="350" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Does the product have variants, including multiple sizes or colors?" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton Name="rbYes" Content="Yes" GroupName="Variants" Checked="RadioButton_Checked" Margin="5,0"/>
+                            <RadioButton Name="rbNo" Content="No" GroupName="Variants" Checked="RadioButton_Checked" Margin="5,0"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Name="VariantPanel" Visibility="Collapsed" Margin="5,0,0,10">
+                        <TextBlock Text="Add product variant types (e.g., 'Color', 'Size') (Max 3 types):" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <ItemsControl Name="VariantTypeList">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical" Margin="0,0,0,10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBox Width="200" Style="{StaticResource LightMinimalistSearchBoxStyle}" Margin="0,0,10,0" Text="Variant Name"/>
+                                            <Button Content="-" Style="{StaticResource LightMinimalistButtonStyle_Short}" Width="25" Click="RemoveVariantType_Click"/>
+                                        </StackPanel>
+                                        <StackPanel Name="VariantValuesStack" Orientation="Vertical">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBox Width="100" Style="{StaticResource LightMinimalistSearchBoxStyle}" Margin="0,0,10,0" Text="Variant Value"/>
+                                                <TextBox Width="150" Style="{StaticResource LightMinimalistSearchBoxStyle}" Margin="0,0,10,0" Text="UPC"/>
+                                                <Button Content="+" Style="{StaticResource LightMinimalistButtonStyle_Short}" Width="25" Click="AddVariantValue_Click"/>
+                                                <Button Content="-" Style="{StaticResource LightMinimalistButtonStyle_Short}" Width="25" Click="RemoveVariantValue_Click"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <Button Name="btnAddVariantType" Style="{StaticResource LightMinimalistButtonStyle_Short}" Width="200" Content="Add New Variant Type" Click="AddVariantType_Click" Visibility="Collapsed" HorizontalAlignment="Left" Margin="10,10,0,0"/>
+
+                    <StackPanel Name="SingleUPCPanel" Margin="5,0,0,0">
+                        <TextBlock Text="UPC:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5" />
+                        <TextBox x:Name="SingleUPCTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" Width="1155" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Add to Quick Select:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5" />
+                        <CheckBox x:Name="AddToQuickSelectCheckBox" Content="Yes" Margin="5"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Track Inventory for this product?" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5" />
+                        <CheckBox x:Name="TrackInventoryCheckBox" Content="Yes" Margin="5" IsChecked="True" />
+                    </StackPanel>
+
+
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Footer -->
+            <Border Grid.Row="2" CornerRadius="0,0,5,5">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="{StaticResource FooterGradientStop1}" Offset="0"/>
+                        <GradientStop Color="{StaticResource FooterGradientStop2}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <StackPanel VerticalAlignment="Center" Margin="5">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Name="btnCancel" Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Width="150" Margin="0,0,5,0">
+                            <TextBlock Text="Cancel" Style="{StaticResource LightMinimalistButtonText}" />
+                        </Button>
+                        <Button Name="btnSaveProduct" Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Click="SaveProduct_Click" Width="150" Margin="5,0,0,0">
+                            <TextBlock Text="Save Product" Style="{StaticResource LightMinimalistButtonText}" />
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+        </Grid>
+    </Border>
+</Page>

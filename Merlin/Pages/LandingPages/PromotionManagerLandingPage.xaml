@@ -1,0 +1,37 @@
+﻿<Page x:Class="MerlinAdministrator.Pages.LandingPages.PromotionManagerLandingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MerlinAdministrator.Pages.LandingPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="810"
+      Title="PromotionManagerLandingPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="White" >
+            <StackPanel>
+                <Button Content="Search" Width="125" Height="30" Margin="5,15,5,5" Click="BtnComboSearch_Click"/>
+                <Button Content="Add Combo" Width="125" Height="30" Margin="5" Click="BtnAddCombo_Click" />
+                <Button Content="Edit Combo" Width="125" Height="30" Margin="5" Click="BtnEditCombo_Click" />
+                <Button Content="Remove Combo" Width="125" Height="30" Margin="5" Click="BtnRemoveCombo_Click" />
+                <Button Content="Bulk Remove Combo" Width="125" Height="30" Margin="5" Click="BtnRemoveComboBulk_Click" />
+                <Button Content="Add Promotion" Width="125" Height="30" Margin="5" Click="BtnAddPromotion_Click" />
+                <Button Content="Search Promotions" Width="125" Height="30" Margin="5" Click="BtnSearchPromotions_Click" />
+                <Button Content="Edit Promotions" Width="125" Height="30" Margin="5" Click="BtnEditPromotions_Click" />
+                <Button Content="Remove Promotions" Width="125" Height="30" Margin="5" Click="BtnRemovePromotions_Click" />
+                <Button Content="Bulk Remove Promotions" Width="125" Height="30" Margin="5" Click="BtnRemovePromotionsBulk_Click" />
+                
+
+            </StackPanel>
+        </Border>
+
+        <Frame x:Name="promotionManagerFrame" NavigationUIVisibility="Hidden" Grid.Column="1"/>
+
+    </Grid>
+</Page>

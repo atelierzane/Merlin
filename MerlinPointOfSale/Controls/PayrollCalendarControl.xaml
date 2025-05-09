@@ -1,0 +1,243 @@
+﻿<UserControl x:Class="MerlinPointOfSale.Controls.PayrollCalendarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:localcontrols="clr-namespace:MerlinPointOfSale.Controls"
+             xmlns:local="clr-namespace:MerlinPointOfSale.Converters"
+             mc:Ignorable="d"  d:DesignWidth="600">
+
+    <UserControl.Resources>
+        <local:DateVisibilityConverter x:Key="DateVisibilityConverter" />
+        <!-- Slide and Fade Out for Forward Animation -->
+        <Storyboard x:Key="TransitionOutForward">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                         To="0" Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" 
+                         To="-100" Duration="0:0:0.4">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <!-- Slide and Fade In for Forward Animation -->
+        <Storyboard x:Key="TransitionInForward">
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" 
+                         From="100" To="0" Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                         From="0" To="1" Duration="0:0:0.4" BeginTime="0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <!-- Slide and Fade Out for Backward Animation -->
+        <Storyboard x:Key="TransitionOutBackward">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                         To="0" Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" 
+                         To="100" Duration="0:0:0.4">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <!-- Slide and Fade In for Backward Animation -->
+        <Storyboard x:Key="TransitionInBackward">
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" 
+                         From="-100" To="0" Duration="0:0:0.4">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                         From="0" To="1" Duration="0:0:0.4" BeginTime="0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Key="MonthTransitionOutForward">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" To="-100" Duration="0:0:0.4">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <!-- Slide In from the Right -->
+        <Storyboard x:Key="MonthTransitionInForward">
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" From="100" To="0" Duration="0:0:0.4">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.4" BeginTime="0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <!-- Slide Out to the Right -->
+        <Storyboard x:Key="MonthTransitionOutBackward">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" To="100" Duration="0:0:0.4">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <!-- Slide In from the Left -->
+        <Storyboard x:Key="MonthTransitionInBackward">
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" From="-100" To="0" Duration="0:0:0.4">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.4" BeginTime="0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <!-- Month View -->
+        <Grid x:Name="MonthView" Visibility="Visible" Opacity="1">
+            <Grid.RenderTransform>
+                <TranslateTransform X="0" />
+            </Grid.RenderTransform>
+            <Border Background="Transparent">
+                <Grid>
+                    <!-- Header and Navigation -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,-75,5,0">
+                        <Button Content="◀" 
+
+            Style="{StaticResource IconButtonStyle}" 
+            VerticalAlignment="Center" 
+            Margin="5" />
+                        <TextBlock x:Name="MonthNameTextBlock"
+               Text="{Binding DisplayMonth}" 
+               FontFamily="Inter"
+               FontWeight="Regular"
+               FontSize="45" 
+               Foreground="#FFFFFF" 
+               Margin="20,0" 
+               VerticalAlignment="Center">
+                            <TextBlock.RenderTransform>
+                                <TranslateTransform X="0" />
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <Button Content="▶" 
+
+            Style="{StaticResource IconButtonStyle}" 
+            VerticalAlignment="Center" 
+            Margin="5" />
+                    </StackPanel>
+
+                    <!-- Week Headers -->
+                    <UniformGrid Rows="1" Columns="7" Margin="5,10,5,0">
+                        <TextBlock Text="Sun" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource merlinCyan_brush}" FontFamily="Inter"/>
+                        <TextBlock Text="Tue" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource merlinCyan_brush}" FontFamily="Inter" />
+                        <TextBlock Text="Wed" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource merlinCyan_brush}" FontFamily="Inter" />
+                        <TextBlock Text="Thu" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource merlinCyan_brush}" FontFamily="Inter" />
+                        <TextBlock Text="Fri" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource merlinCyan_brush}" FontFamily="Inter" />
+                        <TextBlock Text="Sat" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource merlinCyan_brush}" FontFamily="Inter" />
+                    </UniformGrid>
+                    <!-- Dates -->
+                    <ItemsControl x:Name="DayButtonsContainer" ItemsSource="{Binding Dates}">
+                        <ItemsControl.RenderTransform>
+                            <TranslateTransform X="0" />
+                        </ItemsControl.RenderTransform>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Rows="6" Columns="7" Margin="5,50,5,0" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Content="{Binding Date.Day}" 
+                        Style="{StaticResource DateButtonStyle}" 
+
+                        Tag="{Binding}" 
+                        Visibility="{Binding Date, Converter={StaticResource DateVisibilityConverter}}" />
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- Day View -->
+        <Grid x:Name="DayView" Visibility="Collapsed" Opacity="0">
+            <Grid.RenderTransform>
+                <TranslateTransform X="0" />
+            </Grid.RenderTransform>
+            <Grid>
+                <!-- Define Rows for Better Layout Control -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <!-- For Back Button and Header -->
+                    <RowDefinition Height="*" />
+                    <!-- For ScrollViewer -->
+                </Grid.RowDefinitions>
+
+                <!-- Back Button and Header -->
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Grid.Row="0" Margin="10">
+                    <Button Content="◀ Back" Style="{StaticResource IconButtonStyle}" 
+                    HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,10,0" />
+                    <TextBlock x:Name="DayViewHeader" FontSize="20" FontWeight="Bold" Foreground="#FFFFFF" />
+                </StackPanel>
+
+                <!-- Scrollable Content -->
+                <ScrollViewer Grid.Row="1" Margin="10">
+                    <StackPanel>
+                        <TextBlock Text="Appointments" FontSize="16" FontWeight="Bold" Foreground="#00C6FF" Margin="5" />
+                        <ListView x:Name="DayAppointmentsListView" Margin="5">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Time" Width="80" DisplayMemberBinding="{Binding Time}" />
+                                    <GridViewColumn Header="Client" Width="150" DisplayMemberBinding="{Binding Client}" />
+                                    <GridViewColumn Header="Service" Width="200" DisplayMemberBinding="{Binding Service}" />
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
+

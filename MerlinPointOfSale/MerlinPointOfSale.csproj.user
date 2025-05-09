@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Controls\CalendarControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\DialogWindowTitleBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\GaugeControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\InteractiveRectangleControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\MainMenuBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\MainSearchBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\MenuBarControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\PointOfSaleSearchBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\SubMenuBarControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\WeeklyScheduleControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\WindowTitleBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\LoadingAnimation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainWindow_Release.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\BackOfficePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\FinalizeTransactionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\HomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PollingAgentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseAppointmentsPages\CalendarPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\DialogWindowsPages\ConfigurationWindowPages\DatabaseSettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseConfigurationPages\FinancialSettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseConfigurationPages\LocationSettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseConfigurationPages\QuickSelectSettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseHomePages\HomeDashboardPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseHomePages\HomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseLandingPages\AppointmentsLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseLandingPages\ConfigurationLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseLandingPages\CustomersLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseLandingPages\HomeLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleasePerformancePages\PerformanceDashboardPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleasePerformancePages\PerformanceKPIPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseLandingPages\PerformanceLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseLandingPages\PointOfSaleLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseLandingPages\SchedulingPayrollLandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\PayrollCalendarControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleasePerformancePages\PerformanceSalesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleasePointOfSalePages\QuickSelectPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleasePointOfSalePages\RegisterFunctionsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseSchedulingPayrollPages\PlannerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseSchedulingPayrollPages\SchedulePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseSchedulingPayrollPages\TimeCardsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReleaseSchedulingPayrollPages\TimePunchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowBase.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\AlertWindows\AlertWindowBase.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\AlertWindows\InvalidCredentialsAlert.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\AddAppointmentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\AddCustomerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\CardPaymentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\CardRefundWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\CashDropWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\CashPaymentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\ConfigurationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\CustomerSearchWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\DialogWindowBase.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\DialogWindowsPages\ConfigurationWindowPages\LocationSettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\DialogWindowsPages\ConfigurationWindowPages\QuickSelectSettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\DialogWindowsPages\ConfigurationWindowPages\TaxFinancialSettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\DialogWindowsPages\ViewEditTransactionPages\ManualDiscountPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\GiftReceiptItemSelectionDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\ProductSelectionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\QRScannerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\ResumeTransactionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\ResumeTransactionWindow1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\TipEntryDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\TransactionIDInputDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\TransactionLoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\TransactionLookupWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\VariantSelectionDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DialogWindows\ViewEditTransactionDialogWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\EmployeeLoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PointOfSaleWindow_Release.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\CalendarControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\DialogWindowTitleBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\GaugeControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\InteractiveRectangleControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\MainMenuBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\MainSearchBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\MenuBarControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\PointOfSaleSearchBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\SubMenuBarControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\WeeklyScheduleControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\WindowTitleBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\LoadingAnimation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow_Release.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\BackOfficePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\FinalizeTransactionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PollingAgentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseAppointmentsPages\CalendarPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\DialogWindowsPages\ConfigurationWindowPages\DatabaseSettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseConfigurationPages\FinancialSettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseConfigurationPages\LocationSettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseConfigurationPages\QuickSelectSettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseHomePages\HomeDashboardPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseHomePages\HomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseLandingPages\AppointmentsLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseLandingPages\ConfigurationLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseLandingPages\CustomersLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseLandingPages\HomeLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleasePerformancePages\PerformanceDashboardPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleasePerformancePages\PerformanceKPIPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseLandingPages\PerformanceLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseLandingPages\PointOfSaleLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseLandingPages\SchedulingPayrollLandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\PayrollCalendarControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleasePerformancePages\PerformanceSalesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleasePointOfSalePages\QuickSelectPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleasePointOfSalePages\RegisterFunctionsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseSchedulingPayrollPages\PlannerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseSchedulingPayrollPages\SchedulePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseSchedulingPayrollPages\TimeCardsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReleaseSchedulingPayrollPages\TimePunchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowBaseTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowBase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\AlertWindows\AlertWindowBase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\AlertWindows\InvalidCredentialsAlert.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\AddAppointmentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\AddCustomerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\CardPaymentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\CardRefundWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\CashDropWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\CashPaymentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\CustomerSearchWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\CashdropSuccessWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\DialogWindowBase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\DialogWindowsPages\ConfigurationWindowPages\QuickSelectSettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\DialogWindowsPages\ConfigurationWindowPages\TaxFinancialSettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\DialogWindowsPages\ViewEditTransactionPages\ManualDiscountPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\GiftReceiptItemSelectionDialogReprint.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\GiftReceiptItemSelectionDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\ProductSelectionWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\QRScannerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\ResumeTransactionWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\ResumeTransactionWindow1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\TipEntryDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\TransactionIDInputDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\TransactionLoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\TransactionLookupWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\VariantSelectionDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\EmployeeLoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PointOfSaleWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\Animations.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\Colors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\DataTemplates.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\InputFieldStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\TableStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\TextStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\WindowResources.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\ConfigurationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\DialogWindowsPages\ConfigurationWindowPages\LocationSettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindows\ViewEditTransactionDialogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PointOfSaleWindow_Release.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

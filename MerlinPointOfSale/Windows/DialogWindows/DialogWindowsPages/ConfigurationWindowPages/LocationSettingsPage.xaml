@@ -1,0 +1,50 @@
+﻿<Page x:Class="MerlinPointOfSale.Windows.DialogWindows.DialogWindowsPages.ConfigurationWindowPages.LocationSettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MerlinPointOfSale.Windows.DialogWindows.DialogWindowsPages.ConfigurationWindowPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LocationSettingsPage">
+
+    <Grid>
+        <StackPanel Margin="10">
+            <!-- Location ID -->
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Location ID: " />
+                <TextBox x:Name="txtLocationID" Height="25" Width="250" />
+            </StackPanel>
+
+            <!-- Register Number -->
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Register: " Width="66"/>
+                <TextBox x:Name="txtRegisterNumber" Height="25" Width="250" />
+            </StackPanel>
+
+            <!-- Trade Hold Checkbox -->
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <CheckBox x:Name="chkTradeHold" Content="Trade Hold Location" VerticalAlignment="Center" />
+            </StackPanel>
+
+            <!-- Trade Hold Duration -->
+            <StackPanel Orientation="Horizontal" Margin="10" Visibility="Collapsed" x:Name="stackTradeHoldDuration">
+                <TextBlock Text="Hold Duration (days): " VerticalAlignment="Center" />
+                <TextBox x:Name="txtTradeHoldDuration" Height="25" Width="100" />
+            </StackPanel>
+
+            <!-- Enable Tips Checkbox -->
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <CheckBox x:Name="chkEnableTips" Content="Enable Tips" VerticalAlignment="Center" />
+            </StackPanel>
+
+            <!-- Enable Commission Checkbox -->
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <CheckBox x:Name="chkEnableCommission" Content="Enable Commission" VerticalAlignment="Center" />
+            </StackPanel>
+
+            <!-- Save Button -->
+            <Button x:Name="saveButton" Content="Save" Click="onBtnSave_Click" Height="30" Width="200" Margin="5,50,5,5"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,64 @@
+﻿<Window x:Class="MerlinBackOffice.Windows.TradeHoldWindows.TradeHoldCartonDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MerlinBackOffice.Windows.TradeHoldWindows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#C9C9C9"
+        Title="TradeHoldCartonDetailsWindow" Height="750" Width="840">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1">
+            <ListView x:Name="lvTradeHoldDetails" Margin="10" ItemsSource="{Binding}" Height="610">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="SKU" DisplayMemberBinding="{Binding SKU}" Width="120"/>
+                        <GridViewColumn Header="Product Name" DisplayMemberBinding="{Binding ProductName}" Width="150"/>
+                        <GridViewColumn Header="Sellable QTY" DisplayMemberBinding="{Binding SellableQuantity}" Width="130"/>
+                        <GridViewColumn Header="Defective QTY" DisplayMemberBinding="{Binding DefectiveQuantity}" Width="130"/>
+                        <GridViewColumn Header="Confirm Sellable QTY" Width="130">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox x:Name="ConfirmSellableQuantity" Width="100" Text="{Binding ConfirmedSellableQuantity, UpdateSourceTrigger=PropertyChanged}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Confirm Defective QTY" Width="130">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox x:Name="ConfirmDefectiveQuantity" Width="100" Text="{Binding ConfirmedDefectiveQuantity, UpdateSourceTrigger=PropertyChanged}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+
+            <Button Click="OnCancel_Click" 
+                    Style="{StaticResource LightMinimalistButtonStyle_Short}" Width="100" Margin="5,5,5,5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Cancel" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+
+            <Button Click="OnConfirm_Click"
+                    Style="{StaticResource LightMinimalistButtonStyle_Short}" Width="100" Margin="5,5,10,5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Confirm" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+
+
+        </StackPanel>
+    </Grid>
+</Window>

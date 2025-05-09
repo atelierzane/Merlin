@@ -1,0 +1,89 @@
+﻿<Page x:Class="MerlinPointOfSale.Pages.ReleaseSchedulingPayrollPages.TimePunchPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MerlinPointOfSale.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="760" d:DesignWidth="1345">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Centered Date and Time Display -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,20,0,20">
+            <TextBlock x:Name="CurrentDateTextBlock" 
+                       FontFamily="Inter" 
+                       FontSize="16" 
+                       FontWeight="Normal" 
+                       Foreground="White" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,5" />
+            <StackPanel x:Name="TimeDisplayPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                <!-- Separate animated containers for each digit -->
+                <Grid Width="20" Height="40">
+                    <TextBlock x:Name="HourTens" FontFamily="Inter" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Grid>
+                <Grid Width="20" Height="40">
+                    <TextBlock x:Name="HourOnes" FontFamily="Inter" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Grid>
+                <TextBlock Text=":" FontFamily="Inter" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" />
+                <Grid Width="20" Height="40">
+                    <TextBlock x:Name="MinuteTens" FontFamily="Inter" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Grid>
+                <Grid Width="20" Height="40">
+                    <TextBlock x:Name="MinuteOnes" FontFamily="Inter" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Grid>
+                <TextBlock Text=":" FontFamily="Inter" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" />
+                <Grid Width="20" Height="40">
+                    <TextBlock x:Name="SecondTens" FontFamily="Inter" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Grid>
+                <Grid Width="20" Height="40">
+                    <TextBlock x:Name="SecondOnes" FontFamily="Inter" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Grid>
+                <!-- AM/PM Indicator -->
+                <TextBlock x:Name="AmPmTextBlock" FontFamily="Inter" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Main Buttons -->
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Row="1">
+
+            <Button x:Name="ClockInButton" Click="ClockInButton_Click" Style="{StaticResource tileButton}" Margin="10">
+                <StackPanel>
+                    <fa:IconImage Icon="SignIn" Style="{StaticResource tileButtonIconLight}" />
+                    <TextBlock Text="Start Shift" Style="{StaticResource TileButtonText}" Margin="0,25,0,0"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="StartBreakButton" Click="StartBreakButton_Click" Style="{StaticResource tileButton}" Margin="10">
+                <StackPanel>
+                    <fa:IconImage Icon="CirclePause" Style="{StaticResource tileButtonIconLight}" />
+                    <TextBlock Text="Start Break" Style="{StaticResource TileButtonText}" Margin="0,25,0,0"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="EndBreakButton" Click="EndBreakButton_Click" Style="{StaticResource tileButton}" Margin="10">
+                <StackPanel>
+                    <fa:IconImage Icon="PlayCircle" Style="{StaticResource tileButtonIconLight}" />
+                    <TextBlock Text="End Break" Style="{StaticResource TileButtonText}" Margin="0,25,0,0"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="ClockOutButton" Click="ClockOutButton_Click" Style="{StaticResource tileButton}" Margin="10">
+                <StackPanel>
+                    <fa:IconImage Icon="SignOut" Style="{StaticResource tileButtonIconLight}" />
+                    <TextBlock Text="End Shift" Style="{StaticResource TileButtonText}" Margin="0,25,0,0"/>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Page>

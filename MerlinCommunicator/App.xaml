@@ -1,0 +1,18 @@
+﻿<Application x:Class="MerlinCommunicator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MerlinCommunicator"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/Animations.xaml" />
+                <ResourceDictionary Source="/Style/Colors.xaml" />
+                <ResourceDictionary Source="/Style/ButtonStyles.xaml" />
+                <ResourceDictionary Source="/Style/TextStyles.xaml" />
+                <ResourceDictionary Source="/Style/InputFieldStyles.xaml" />
+                <ResourceDictionary Source="/Style/WindowResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

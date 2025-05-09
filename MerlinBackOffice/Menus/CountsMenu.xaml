@@ -1,0 +1,75 @@
+﻿<Window x:Class="MerlinBackOffice.Menus.CountsMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MerlinBackOffice.Menus"
+        mc:Ignorable="d"
+        Background="#C9C9C9"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="Inventory Counts" Height="445" Width="275">
+    <Grid>
+
+        <StackPanel>
+
+            <Button   Opacity=".45" IsEnabled="False"
+                 Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Width="235" Margin="5,25,5,5"
+                             >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Title On Hand [F1]" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+
+            <Button Click="OnBtnCategoryCount_Click"
+                    Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Width="235" Margin="5,5,5,5"
+                             >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Category [F2]" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+
+            <Button   Opacity=".45" IsEnabled="False"
+                 Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Width="235" Margin="5,5,5,5"
+                             >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Perpetual [F3]" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+
+            <Button Click="OnBtnDefectiveCount_Click" 
+                    Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Width="235" Margin="5,5,5,5"
+                             >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Defective [F4]" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+
+            <Button   Opacity=".45" IsEnabled="False"
+                 Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Width="235" Margin="5,5,5,5"
+                             >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Trade Hold [F5]" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+
+            <Button  
+                 Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Width="235" Margin="5,5,5,5"
+                             >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Back [ESC]" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+
+            <Button Click="ResetCounts_Click" 
+                    Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Width="235" Margin="5,5,5,5"
+                             >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Reset Counts" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

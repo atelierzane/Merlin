@@ -1,0 +1,131 @@
+﻿<Page x:Class="MerlinAdministrator.Pages.KPIManager.AddKPIPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="Add KPI">
+
+    <Border CornerRadius="7,7,5,5" Margin="5,10,5,5">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#C9C9C9" Offset="0"/>
+                <GradientStop Color="#B1B1B1" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Border Grid.Row="0" CornerRadius="5,5,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="{StaticResource HeaderGradientStop1}" Offset="0"/>
+                        <GradientStop Color="{StaticResource HeaderGradientStop2}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="4" Opacity=".5" Direction="275" ShadowDepth="2" />
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Add KPI" Style="{StaticResource PageHeaderTitle}" Margin="10,10,10,5"/>
+                    <TextBlock Text="Define a new custom Key Performance Indicator by setting name, targets, and display logic."
+                               Style="{StaticResource PageHeaderText}" Margin="10,0,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Content -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="10">
+
+                    <!-- KPI Name -->
+                    <TextBlock Text="KPI Name:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                    <TextBox x:Name="KPINameTextBox" Width="400" Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <!-- KPI Target -->
+                    <TextBlock Text="KPI Target Type:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                    <ComboBox x:Name="KPITargetTypeComboBox" Width="400" Style="{StaticResource LightMinimalistComboBoxStyle}" SelectionChanged="TargetTypeChanged">
+                        <ComboBoxItem Content="Category"/>
+                        <ComboBoxItem Content="SKU"/>
+                    </ComboBox>
+
+                    <!-- Target Items -->
+                    <TextBlock Text="Select Target Items:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                    <ItemsControl x:Name="TargetItemsControl" Width="400" Margin="5,0,0,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox Content="{Binding DisplayName}" IsChecked="{Binding IsSelected}" Margin="5"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Dependencies -->
+                    <TextBlock Text="Dependencies (Optional):" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                    <ComboBox x:Name="DependencyTypeComboBox" Width="400" Style="{StaticResource LightMinimalistComboBoxStyle}" SelectionChanged="DependencyTypeChanged">
+                        <ComboBoxItem Content="Category"/>
+                        <ComboBoxItem Content="SKU"/>
+                    </ComboBox>
+
+                    <ItemsControl x:Name="DependencyItemsControl" Width="400" Margin="5,0,0,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox Content="{Binding DisplayName}" IsChecked="{Binding IsSelected}" Margin="5"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Plan -->
+                    <TextBlock Text="Plan Value:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                    <TextBox x:Name="KPIPlanTextBox" Width="400" Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <TextBlock Text="Display Plan As:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                    <ComboBox x:Name="KPIPlanDisplayAsComboBox" Width="400" Style="{StaticResource LightMinimalistComboBoxStyle}">
+                        <ComboBoxItem Content="Percentage"/>
+                        <ComboBoxItem Content="Currency"/>
+                        <ComboBoxItem Content="Number"/>
+                    </ComboBox>
+
+                    <!-- Goal -->
+                    <TextBlock Text="Goal Value:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                    <TextBox x:Name="KPIGoalTextBox" Width="400" Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <TextBlock Text="Display Goal As:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                    <ComboBox x:Name="KPIGoalDisplayAsComboBox" Width="400" Style="{StaticResource LightMinimalistComboBoxStyle}">
+                        <ComboBoxItem Content="Percentage"/>
+                        <ComboBoxItem Content="Currency"/>
+                        <ComboBoxItem Content="Number"/>
+                    </ComboBox>
+
+                    <!-- Compare To -->
+                    <TextBlock Text="Compare To:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                    <ComboBox x:Name="KPICompareToComboBox" Width="400" Style="{StaticResource LightMinimalistComboBoxStyle}">
+                        <ComboBoxItem Content="Sales"/>
+                        <ComboBoxItem Content="Trades"/>
+                        <ComboBoxItem Content="Transactions"/>
+                        <ComboBoxItem Content="Plan"/>
+                        <ComboBoxItem Content="Goal"/>
+                    </ComboBox>
+
+                    <!-- Display As -->
+                    <TextBlock Text="Display KPI As:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                    <ComboBox x:Name="KPIDisplayAsComboBox" Width="400" Style="{StaticResource LightMinimalistComboBoxStyle}">
+                        <ComboBoxItem Content="Percentage"/>
+                        <ComboBoxItem Content="Currency"/>
+                        <ComboBoxItem Content="Number"/>
+                    </ComboBox>
+
+                    <!-- Save Button -->
+                    <Button Content="Save KPI" Name="SaveKPIButton" Style="{StaticResource LightMinimalistButtonStyle_Short}" Width="150" HorizontalAlignment="Left" Margin="10,20,0,0" Click="SaveKPI_Click"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</Page>

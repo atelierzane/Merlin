@@ -1,0 +1,99 @@
+﻿<Page x:Class="MerlinPointOfSale.Windows.DialogWindows.DialogWindowsPages.ViewEditTransactionPages.ManualDiscountPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Manual Discount">
+    <Grid Margin="10">
+        <StackPanel>
+
+            <!-- DataGrid to display transaction items (ReadOnly) -->
+            <DataGrid x:Name="dgTransactionItems"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      Margin="5"
+                      Height="355"
+                      Background="Transparent"
+                      GridLinesVisibility="None"
+                      BorderBrush="{StaticResource merlinCyan_brush}"
+                      BorderThickness="0,1,0,0"
+                      HeadersVisibility="Column">
+                <DataGrid.Resources>
+                    <!-- Row Style -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="FontFamily" Value="Inter" />
+                        <Setter Property="FontSize" Value="14" />
+                        <Setter Property="BorderBrush" Value="Transparent" />
+                        <Setter Property="Margin" Value="0,5,0,5" />
+                        <!-- Highlight Entire Row -->
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="{StaticResource ellipseButtonBg_merlinCyan}" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter Property="BorderBrush" Value="{StaticResource ellipseButtonBg_merlinCyan}" />
+                                <Setter Property="BorderThickness" Value="0,0,0,2" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <!-- Cell Style -->
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="FontFamily" Value="Inter" />
+                        <Setter Property="FontSize" Value="14" />
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                        <Setter Property="BorderThickness" Value="0" />
+                    </Style>
+
+                    <!-- Header Style -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Foreground" Value="#FFFFFF" />
+                        <Setter Property="FontFamily" Value="Inter" />
+                        <Setter Property="FontWeight" Value="Bold" />
+                        <Setter Property="FontSize" Value="16" />
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="BorderBrush" Value="{StaticResource merlinCyan_brush}" />
+                        <Setter Property="BorderThickness" Value="0,0,0,1" />
+                        <Setter Property="Padding" Value="10,15,10,15" />
+                    </Style>
+                </DataGrid.Resources>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Product Name" Binding="{Binding ProductName}" Width="200" />
+                    <DataGridTextColumn Header="Original Price" Binding="{Binding Value, StringFormat=C}" Width="100" />
+                    <DataGridTextColumn Header="Discounted Price" Binding="{Binding AdjustedValue, StringFormat=C}" Width="100" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Discount type selection (Dollar or Percentage) -->
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Discount Type:" Style="{StaticResource DarkMinimalistButtonText}" VerticalAlignment="Center" Margin="5" />
+                <ComboBox x:Name="cbDiscountType" Width="150" Margin="5" Height="30" VerticalContentAlignment="Center">
+                    <ComboBoxItem Content="Dollar Amount" IsSelected="True" />
+                    <ComboBoxItem Content="Percentage" />
+                </ComboBox>
+
+                <TextBlock Text="Discount Amount:" Style="{StaticResource DarkMinimalistButtonText}" VerticalAlignment="Center" Margin="20,5,5,5" />
+                <TextBox x:Name="txtDiscountAmount" Style="{StaticResource LightMinimalistSearchBoxStyle}" Width="100" Margin="5" />
+            </StackPanel>
+
+            <!-- Button to apply discount -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <Button Style="{StaticResource LightMinimalistButtonStyle}" Width="100" Margin="5,5,5,5">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Cancel" Style="{StaticResource LightMinimalistButtonText}" />
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource LightMinimalistButtonStyle}" Width="150" Margin="5,5,5,5" Click="OnApplyDiscount_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Apply Discounts" Style="{StaticResource LightMinimalistButtonText}" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

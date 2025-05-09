@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="MerlinPointOfSale.Controls.WeeklyScheduleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MerlinPointOfSale.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    
+    
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Top Panel for Controls -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="25,5,5,5">
+
+            <ComboBox x:Name="WeekComboBox" 
+                      Width="200" 
+                      Height="25" 
+                      SelectionChanged="WeekComboBox_SelectionChanged"
+                      Margin="5" />
+            <Button x:Name="AddShiftButton"
+                    Style="{StaticResource ellipseButton4}"
+                    Content="Add Shift to Day"
+                    Margin="5"
+                    Click="AddShiftButton_Click" />
+            <Button Style="{StaticResource ellipseButton4}" Content="Post Schedule for Day"  Margin="5" Click="PostScheduleButton_Click"/>
+
+            <TextBlock x:Name="AllocatedHoursTextBlock"
+                       Margin="10,0,0,0"
+                       VerticalAlignment="Center"
+                       FontSize="14"
+                       FontWeight="Bold"
+                       Text="Allocated Hours: 0h"
+                       Foreground="White"/>
+            <TextBlock x:Name="ScheduledHoursTextBlock"
+                       Margin="10,0,0,0"
+                       VerticalAlignment="Center"
+                       FontSize="14"
+                       FontWeight="Bold"
+                       Text="Scheduled Hours: 0h"
+                       Foreground="White"/>
+
+        </StackPanel>
+
+        <!-- SubMenuBar -->
+        <local:SubMenuBarControl x:Name="subMenuBar" Grid.Row="1" Margin="0"/>
+        <Canvas x:Name="GridLinesCanvas" Background="Transparent" Grid.Row="2"  Margin="0,0,0,0"/>
+        <!-- Day Content Grid -->
+        <Grid x:Name="DayContentGrid" Grid.Row="2" Background="Transparent" Margin="0,0,0,0">
+            <!-- Each day's grid will be dynamically loaded here -->
+            
+
+        </Grid>
+        
+    </Grid>
+</UserControl>

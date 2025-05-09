@@ -1,0 +1,28 @@
+﻿<Page x:Class="MerlinAdministrator.Pages.LandingPages.PayrollLandingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MerlinAdministrator.Pages.LandingPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="810"
+      Title="InventoryManagerLandingPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="White" >
+            <StackPanel>
+                <Button Click="OnAllocateHours_Click" Content="Allocate Hours" Width="125" Height="30" Margin="5,15,5,5"/>
+
+
+            </StackPanel>
+        </Border>
+
+        <Frame x:Name="payrollFrame" NavigationUIVisibility="Hidden" Grid.Column="1"/>
+
+    </Grid>
+</Page>

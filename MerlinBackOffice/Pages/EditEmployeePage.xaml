@@ -1,0 +1,84 @@
+﻿<Page x:Class="MerlinBackOffice.Pages.EditEmployeePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      Title="Edit Employee">
+
+    <Page.Resources>
+        <!-- Global font setting for Inter -->
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Inter"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Inter"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="FontFamily" Value="Inter"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Inter"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Background="#EDEDED" Padding="10">
+            <StackPanel>
+                <TextBlock Text="Edit Employee" FontSize="24" FontWeight="Bold" Foreground="#333333"/>
+                <TextBlock Text="Search for an employee, update their details, and save the changes." 
+                           FontSize="14" Foreground="#555555" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Content -->
+        <ScrollViewer Grid.Row="1" Margin="10" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <!-- Search Section -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Search Employee by ID:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <TextBox x:Name="SearchEmployeeTextBox" Width="200" Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+                    <Button Content="Search" Width="100" Margin="10,0,0,0" Style="{StaticResource LightMinimalistButtonStyle_Short}" Click="SearchEmployee_Click"/>
+                </StackPanel>
+
+                <!-- Employee Details -->
+                <StackPanel Margin="0,10,0,0">
+                    <TextBlock Text="Employee Details:" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                    <TextBlock Text="First Name:" Margin="0,5,0,2"/>
+                    <TextBox x:Name="FirstNameTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <TextBlock Text="Last Name:" Margin="0,10,0,2"/>
+                    <TextBox x:Name="LastNameTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <TextBlock Text="Primary Location:" Margin="0,10,0,2"/>
+                    <ComboBox x:Name="PrimaryLocationComboBox" Style="{StaticResource LightMinimalistComboBoxStyle}"/>
+
+                    <TextBlock Text="Wage:" Margin="0,10,0,2"/>
+                    <TextBox x:Name="WageTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,2">
+                        <TextBlock Text="Tip Eligible:" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                        <RadioButton x:Name="rbTipYes" Content="Yes" GroupName="TipEligibility" Checked="rbTipYes_Checked"/>
+                        <RadioButton x:Name="rbTipNo" Content="No" GroupName="TipEligibility" Checked="rbTipNo_Checked" IsChecked="True"/>
+                    </StackPanel>
+
+                    <TextBlock Text="Commission Rate (%):" Margin="0,10,0,2"/>
+                    <TextBox x:Name="CommissionRateTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <TextBlock Text="Commission Limit:" Margin="0,10,0,2"/>
+                    <TextBox x:Name="CommissionLimitTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+                </StackPanel>
+
+                <!-- Save Button -->
+                <Button Content="Save Changes" Width="200" Margin="0,20,0,0" HorizontalAlignment="Center" Style="{StaticResource LightMinimalistButtonStyle_Short}" Click="SaveChanges_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

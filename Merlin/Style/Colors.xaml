@@ -1,0 +1,123 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <SolidColorBrush x:Key="HeaderGradientStop1_brush" Color="#3B3B3B" />
+    <SolidColorBrush x:Key="HeaderGradientStop2_brush" Color="#181818" />
+
+    <SolidColorBrush x:Key="HeaderTextColor_brush">#F1F1F1</SolidColorBrush>
+
+    <Color x:Key="HeaderGradientStop1">#3B3B3B</Color>
+    <Color x:Key="HeaderGradientStop2">#181818</Color>
+
+    <Color x:Key="FooterGradientStop1">#515151</Color>
+    <Color x:Key="FooterGradientStop2">#474747</Color>
+
+    <Color x:Key="HeaderTextColor">#F1F1F1</Color>
+
+    <!--Background Colors-->
+
+    <Color x:Key="primaryBackColor1">#0A003A</Color>
+    <Color x:Key="primaryBackColor2">#1C0E49</Color>
+    <Color x:Key="secondaryBackColor1">#24105F</Color>
+    <Color x:Key="secondaryBackColor2">#210F55</Color>
+
+
+    <!--Window Border Colors-->
+
+    <Color x:Key="winBorderColor1">#6D2FFF</Color>
+    <Color x:Key="winBorderColor2">#8A16C1</Color>
+    <Color x:Key="winBorderColor3">#FB539B</Color>
+
+
+    <!--Color Palette-->
+
+    <SolidColorBrush x:Key="color1" Color="#E285DE"/>
+    <SolidColorBrush x:Key="color2" Color="#784DFD"/>
+    <SolidColorBrush x:Key="color3" Color="#4ADAEC"/>
+    <SolidColorBrush x:Key="color4" Color="#FB539B"/>
+    <SolidColorBrush x:Key="color5" Color="#7E82FC"/>
+    <SolidColorBrush x:Key="color6" Color="#FFC047"/>
+    <SolidColorBrush x:Key="color7" Color="#EF6C96"/>
+    <SolidColorBrush x:Key="color8" Color="#78A3FC"/>
+    <SolidColorBrush x:Key="color9" Color="#07F3C0"/>
+    <SolidColorBrush x:Key="color10" Color="#FBA1AA"/>
+    <SolidColorBrush x:Key="color11" Color="#00C6FF"/>
+
+
+
+    <!--Text Palette-->
+
+
+
+    <!--Panel Palette-->
+
+    <SolidColorBrush x:Key="panelColor" Color="#200F53"/>
+    <SolidColorBrush x:Key="panelOverColor" Color="#281269"/>
+    <SolidColorBrush x:Key="panelActiveColor" Color="#2B1372"/>
+
+    <!--Button Colors-->
+
+    <!--Text Box Colors-->
+
+
+
+    <!--Merlin Colors-->
+
+    <Color x:Key="windowBorderColor_Highlight">#FF00C9</Color>
+    <Color x:Key="controlButtonHover">#C100FF</Color>
+    <SolidColorBrush x:Key="controlButtonHover_Close">#FF4657</SolidColorBrush>
+    <SolidColorBrush x:Key="titleColor1" Color="#F1F1F1"/>
+    <SolidColorBrush x:Key="plainTextColor1" Color="#F1F1F1"/>
+
+
+
+    <Color x:Key="separatorBorderColor_Highlight">#FF00BA</Color>
+
+    <Color x:Key="iconForegroundBase">#FF00BA</Color>
+
+
+
+    <Color x:Key="menuBarButtonHover">#C100FF</Color>
+    <SolidColorBrush x:Key="dialogWindowFlash">#C100FF</SolidColorBrush>
+
+
+
+    <Color x:Key="merlinBlueTitleBar">#001F48</Color>
+
+    <Color x:Key="merlinBlueStop2">#071933</Color>
+    <Color x:Key="merlinLightBlue">#D4EEF6</Color>
+    <SolidColorBrush x:Key="merlinBlueOver">#1C2967</SolidColorBrush>
+    <SolidColorBrush x:Key="merlinBlueActive">#1F3184</SolidColorBrush>
+
+
+    <!--Merlin Colors RELEASE-->
+
+    <!--Merlin Universal-->
+
+    <Color x:Key="merlinBlack">#181818</Color>
+    <SolidColorBrush x:Key="merlinBlack_brush">#181818</SolidColorBrush>
+    <Color x:Key="merlinWhite">#F1F1F1</Color>
+    <SolidColorBrush x:Key="merlinWhite_brush">#F1F1F1</SolidColorBrush>
+    <Color x:Key="merlinTitleBarControlButtonHover_Close">#FF4657</Color>
+
+    <!--MerlinCyan-->
+    <Color x:Key="merlinCyan">#C2002D</Color>
+    <SolidColorBrush x:Key="merlinCyan_brush">#C2002D</SolidColorBrush>
+
+
+    <!-- Cyan Border Colors -->
+    <Color x:Key="merlinCyanBorder_Highlight">#FF0054</Color>
+    <Color x:Key="windowBorderColor_merlinCyan_GradientStop1">#741F2A</Color>
+    <Color x:Key="windowBorderColor_merlinCyan_GradientStop2">#741F2A</Color>
+
+    <SolidColorBrush x:Key="dialogWindowFlash_merlinCyan">#EC004B</SolidColorBrush>
+
+    <SolidColorBrush x:Key="dialogWindwoButtonBackground_merlinCyan">#741F2A</SolidColorBrush>
+    <Color x:Key="dialogWindwoButtonBackground_Hover_merlinCyan">#B71437</Color>
+    <SolidColorBrush x:Key="ellipseButtonHowver_merlinCyan">#B71437</SolidColorBrush>
+    <Color x:Key="menuBarIndicatorGlow_merlinCyan">#FF0054</Color>
+    <Color x:Key="merlinBlue">#FF0054</Color>
+    <SolidColorBrush x:Key="ellipseButtonBg_merlinCyan">#741F2A</SolidColorBrush>
+    
+</ResourceDictionary>

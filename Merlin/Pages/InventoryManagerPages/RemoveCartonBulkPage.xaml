@@ -1,0 +1,71 @@
+﻿<Page x:Class="MerlinAdministrator.Pages.InventoryManagerPages.RemoveCartonBulkPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="RemoveCartonBulkPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="White" Grid.ColumnSpan="2"/>
+
+        <!-- Filter/Criteria section -->
+        <StackPanel Grid.Column="0" Margin="5">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Carton ID: " />
+                <TextBox x:Name="CartonIDTextBox" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Status: " />
+                <ComboBox x:Name="StatusComboBox" Width="100">
+                    <ComboBoxItem Content="All Statuses"/>
+                    <ComboBoxItem Content="IN TRANSIT"/>
+                    <ComboBoxItem Content="FINALIZED"/>
+                    <ComboBoxItem Content="RECEIVED"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Origin: " />
+                <TextBox x:Name="OriginTextBox" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Destination: " />
+                <TextBox x:Name="DestinationTextBox" Width="100" />
+            </StackPanel>
+
+            <!-- Search Buttons -->
+            <Button Content="Search" Width="125" Height="25" Click="SearchButton_Click"/>
+            <Button Content="Reset" Width="125" Height="25" Click="ResetButton_Click"/>
+            <Button Content="Delete Selected" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Width="150" Click="DeleteSelectedButton_Click"/>
+        </StackPanel>
+
+        <!-- Results DataGrid with Checkboxes -->
+        <DataGrid x:Name="CartonDataGrid" Grid.Column="1" Margin="5" AutoGenerateColumns="False" SelectionMode="Extended">
+            <DataGrid.Columns>
+                <!-- Select All checkbox -->
+                <DataGridTemplateColumn Header="Select">
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="SelectAllCheckBox" Content="All" Click="SelectAllCheckBox_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Header="Carton ID" Binding="{Binding CartonID}" Width="*"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding CartonStatus}" Width="*"/>
+                <DataGridTextColumn Header="Origin" Binding="{Binding CartonOrigin}" Width="*"/>
+                <DataGridTextColumn Header="Destination" Binding="{Binding CartonDestination}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

@@ -1,0 +1,9 @@
+﻿<Application x:Class="MerlinBackOffice.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MerlinBackOffice"
+             StartupUri="MainMenu.xaml">
+    <Application.Resources>
+        <ResourceDictionary Source="/Style/ButtonStyles.xaml" />
+    </Application.Resources>
+</Application>

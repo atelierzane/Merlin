@@ -1,0 +1,135 @@
+﻿<Page x:Class="MerlinPointOfSale.Pages.ReleasePointOfSalePages.RegisterFunctionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MerlinPointOfSale.Pages"
+      xmlns:controls ="clr-namespace:MerlinPointOfSale.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="760" d:DesignWidth="1345"
+      Title="PointOfSale_MainMenuPage">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+             VerticalAlignment="Center">
+
+
+            <StackPanel Orientation="Horizontal"
+             VerticalAlignment="Center"
+             HorizontalAlignment="Center"
+             >
+
+                <Button Style="{StaticResource tileButton}"  Margin="10" Click="OnStartTransactionButton_Click" >
+                    <StackPanel>
+                        <fa:IconImage Icon="CashRegister" Style="{StaticResource tileButtonIconLight}" />
+                        <TextBlock Text="Start a Transaction" Style="{StaticResource TileButtonText}" Margin="0,25,0,0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource tileButton}" Margin="10" Opacity="1" Click="OnResumeTransactionButton_Click">
+                    <StackPanel>
+                        <fa:IconImage Icon="ShoppingBasket" Style="{StaticResource tileButtonIconLight}" />
+                        <TextBlock Text="Resume a Transaction" Style="{StaticResource TileButtonText}" Margin="0,25,0,0"/>
+                    </StackPanel>
+                </Button>
+
+                <Grid x:Name="ResumeTransactionGrid" Visibility="Collapsed" Background="White" Margin="20">
+                    <Border BorderThickness="2" BorderBrush="Black" CornerRadius="10">
+                        <StackPanel>
+                            <TextBlock Text="Resume Transaction" FontWeight="Bold" FontSize="16" Margin="10"/>
+                            <DataGrid x:Name="SuspendedTransactionsDataGrid" AutoGenerateColumns="False" Height="300" Margin="10" SelectionMode="Single">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Transaction ID" Binding="{Binding TransactionID}" Width="*"/>
+                                    <DataGridTextColumn Header="Date" Binding="{Binding TransactionDate}" Width="*"/>
+                                    <DataGridTextColumn Header="Time" Binding="{Binding TransactionTime}" Width="*"/>
+                                    <DataGridTextColumn Header="Employee ID" Binding="{Binding EmployeeID}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                                <Button Content="Resume" Width="100" Margin="5" Click="OnResumeSelectedTransaction_Click"/>
+                                <Button Content="Cancel" Width="100" Margin="5" Click="OnCancelResumeTransaction_Click"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+                <Button Style="{StaticResource tileButton}"  Margin="10" IsEnabled="False">
+                    <StackPanel>
+                        <fa:IconImage Icon="Cancel" Style="{StaticResource tileButtonIconLight}" />
+                        <TextBlock Text="Post-void a Transaction" Style="{StaticResource TileButtonText}" Margin="0,25,0,0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button 
+                        Style="{StaticResource tileButton}"  Margin="10" Click="OnCloseForPolling_Click">
+                    <StackPanel>
+                        <fa:IconImage Icon="StoreSlash" Style="{StaticResource tileButtonIconLight}" />
+                        <TextBlock Text="Close for Polling" Style="{StaticResource TileButtonText}" Margin="0,25,0,0"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+             VerticalAlignment="Center"
+             HorizontalAlignment="Center"
+             >
+                <Button Click="PrintGiftReceipt_Click"
+                        Style="{StaticResource tileHalfButton}"  Margin="10">
+                    <StackPanel Orientation="Horizontal">
+
+                        <TextBlock Text="Print Gift Receipt" Style="{StaticResource TileButtonText}" Margin="0,0,0,0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="ReprintReceipt_Click"
+                        Style="{StaticResource tileHalfButton}"  Margin="10" >
+                    <StackPanel>
+                        <TextBlock Text="Re-print Receipt" Style="{StaticResource TileButtonText}" Margin="0,0,0,0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource tileHalfButton}"  Margin="10"  IsEnabled="False">
+                    <StackPanel>
+                        <TextBlock Text="Card Balance" Style="{StaticResource TileButtonText}" Margin="0,0,0,0"/>
+                    </StackPanel>
+
+                </Button>
+
+                <Button Click="TransactionLookup_Click"
+                        Style="{StaticResource tileHalfButton}"  Margin="10">
+                    <StackPanel>
+                        <TextBlock Text="Transaction Lookup" Style="{StaticResource TileButtonText}" Margin="0,0,0,0"/>
+                    </StackPanel>
+
+                </Button>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+             VerticalAlignment="Center"
+             HorizontalAlignment="Left"
+             >
+                <Button Click="CashDropButton_Click" Width="520"  Style="{StaticResource tileHalfButton}"  Margin="10">
+                    <StackPanel>
+                        <TextBlock Text="Cash Drop" Style="{StaticResource TileButtonText}" Margin="0,0,0,0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="NoSaleButton_Click"  Width="520" Style="{StaticResource tileHalfButton}"  Margin="10">
+                    <StackPanel>
+                        <TextBlock Text="No Sale" Style="{StaticResource TileButtonText}" Margin="0,0,0,0"/>
+                    </StackPanel>
+                </Button>
+
+
+
+                <controls:LoadingAnimation x:Name="LoadingAnimation" Visibility="Collapsed" Width="100" Height="50" />
+
+            </StackPanel>
+        </StackPanel>
+
+
+
+
+    </Grid>
+</Page>

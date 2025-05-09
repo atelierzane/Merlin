@@ -1,0 +1,72 @@
+﻿<Page x:Class="MerlinAdministrator.Pages.PromotionManagerPages.RemovePromotionBulkPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="RemovePromotionBulkPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="White" Grid.ColumnSpan="2"/>
+
+        <!-- Filter/Criteria section -->
+        <StackPanel Grid.Column="0" Margin="10">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Promotion ID: " />
+                <TextBox x:Name="PromotionIDTextBox" Width="120" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Promotion Name: " />
+                <TextBox x:Name="PromotionNameTextBox" Width="150" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Discount >=: " />
+                <TextBox x:Name="MinDiscountTextBox" Width="75" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Discount &lt; " />
+                <TextBox x:Name="MaxDiscountTextBox" Width="75" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Start Date: " />
+                <DatePicker x:Name="StartDatePicker" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="End Date: " />
+                <DatePicker x:Name="EndDatePicker" />
+            </StackPanel>
+
+            <!-- Search Buttons -->
+            <Button Content="Search" Width="125" Height="30" Click="SearchButton_Click" Margin="5,10,5,5" />
+            <Button Content="Reset" Width="125" Height="30" Click="ResetButton_Click" Margin="5" />
+            <Button Content="Delete Selected" Width="150" Height="30" Click="DeleteSelectedButton_Click" Margin="5" />
+        </StackPanel>
+
+        <!-- Results DataGrid with Checkboxes -->
+        <DataGrid x:Name="PromotionDataGrid" Grid.Column="1" Margin="10" AutoGenerateColumns="False" SelectionMode="Extended">
+            <DataGrid.Columns>
+                <!-- Select All checkbox -->
+                <DataGridTemplateColumn Header="Select">
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="SelectAllCheckBox" Content="All" Click="SelectAllCheckBox_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Header="Promotion ID" Binding="{Binding PromotionID}" Width="*"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding PromotionName}" Width="*"/>
+                <DataGridTextColumn Header="Discount" Binding="{Binding PromotionDiscountValue, StringFormat=C}" Width="*"/>
+                <DataGridTextColumn Header="Start Date" Binding="{Binding PromotionStartDate, StringFormat=d}" Width="*"/>
+                <DataGridTextColumn Header="End Date" Binding="{Binding PromotionEndDate, StringFormat=d}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

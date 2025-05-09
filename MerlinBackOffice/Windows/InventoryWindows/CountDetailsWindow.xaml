@@ -1,0 +1,18 @@
+﻿<Window x:Class="MerlinBackOffice.Windows.InventoryWindows.CountDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        Title="Count Details" Height="500" Width="700">
+    <Grid>
+        <ListView Name="lvCountDetails" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="SKU" DisplayMemberBinding="{Binding SKU}" Width="120"/>
+                    <GridViewColumn Header="Expected Qty" DisplayMemberBinding="{Binding SKUQuantityExpected}" Width="120"/>
+                    <GridViewColumn Header="Actual Qty" DisplayMemberBinding="{Binding SKUQuantityActual}" Width="120"/>
+                    <GridViewColumn Header="Discrepancy" DisplayMemberBinding="{Binding SKUDiscrepancy}" Width="120"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

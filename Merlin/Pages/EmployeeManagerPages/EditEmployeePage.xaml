@@ -1,0 +1,137 @@
+﻿<Page x:Class="MerlinAdministrator.Pages.EmployeeManagerPages.EditEmployeePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="EditEmployeePage">
+
+    <Border CornerRadius="7,7,5,5" Margin="5,10,5,5">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#C9C9C9" Offset="0"/>
+                <GradientStop Color="#B1B1B1" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Border Grid.Row="0" CornerRadius="5,5,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="{StaticResource HeaderGradientStop1}" Offset="0"/>
+                        <GradientStop Color="{StaticResource HeaderGradientStop2}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="4" Opacity=".5" Direction="275" ShadowDepth="2" />
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Edit Employee" Style="{StaticResource PageHeaderTitle}" Margin="10,10,10,5" />
+                    <TextBlock Text="Search and update employee details. Payroll and eligibility settings can be modified."
+                               Style="{StaticResource PageHeaderText}" Margin="10,0,0,0" />
+                </StackPanel>
+            </Border>
+
+            <!-- Content -->
+            <ScrollViewer Grid.Row="1" Margin="10">
+                <StackPanel>
+
+                    <!-- Search Section -->
+                    <StackPanel Orientation="Horizontal" Margin="5,0,0,10">
+                        <TextBlock Text="Employee ID:" Style="{StaticResource ControlHeaderText}" VerticalAlignment="Center" Margin="5,10,0,5"/>
+                        <TextBox x:Name="EmployeeIDTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" Width="200" Margin="10,0,10,0"/>
+                        <Button Content="Search" Style="{StaticResource LightMinimalistButtonStyle_Short}" Click="SearchButton_Click"/>
+                    </StackPanel>
+
+                    <!-- Editable Section -->
+                    <Grid x:Name="EmployeeEditSection" Visibility="Collapsed">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Left Column -->
+                        <StackPanel Grid.Column="0" Margin="5">
+                            <TextBlock Text="First Name:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <TextBox x:Name="FirstNameTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+
+                            <TextBlock Text="Last Name:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <TextBox x:Name="LastNameTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+
+                            <TextBlock Text="Street Address:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <TextBox x:Name="StreetAddressTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+
+                            <TextBlock Text="City:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <TextBox x:Name="CityTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+
+                            <TextBlock Text="State:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <ComboBox x:Name="StateTextBox" Style="{StaticResource LightMinimalistComboBoxStyle}" />
+
+                            <TextBlock Text="ZIP Code:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <TextBox x:Name="ZIPTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+
+                            <TextBlock Text="Phone Number:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <TextBox x:Name="PhoneNumberTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+
+                            <TextBlock Text="Email Address:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <TextBox x:Name="EmailTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+                        </StackPanel>
+
+                        <!-- Right Column -->
+                        <StackPanel Grid.Column="1" Margin="5">
+                            <TextBlock Text="SSN:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <TextBox x:Name="SSNTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+
+                            <TextBlock Text="Employee Type:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <ComboBox x:Name="EmployeeTypeComboBox" Style="{StaticResource LightMinimalistComboBoxStyle}">
+                                <ComboBoxItem Content="Sales" />
+                                <ComboBoxItem Content="Manager" />
+                                <ComboBoxItem Content="Administrator" />
+                            </ComboBox>
+
+                            <TextBlock Text="Primary Location:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <TextBox x:Name="PrimaryLocationTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+
+                            <TextBlock Text="Wage:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <TextBox x:Name="WageTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+
+                            <TextBlock Text="Pay Rate:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <ComboBox x:Name="PayRateComboBox" Style="{StaticResource LightMinimalistComboBoxStyle}">
+                                <ComboBoxItem Content="Hourly" />
+                                <ComboBoxItem Content="Annually" />
+                            </ComboBox>
+
+                            <TextBlock Text="Pay Frequency:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <ComboBox x:Name="PayFrequencyComboBox" Style="{StaticResource LightMinimalistComboBoxStyle}">
+                                <ComboBoxItem Content="Weekly" />
+                                <ComboBoxItem Content="Bi-weekly" />
+                                <ComboBoxItem Content="Monthly" />
+                            </ComboBox>
+
+                            <TextBlock Text="Is the employee eligible for overtime pay?" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <StackPanel Orientation="Horizontal">
+                                <RadioButton Name="rbOtYes" Content="Yes" GroupName="Overtime"/>
+                                <RadioButton Name="rbOtNo" Content="No" GroupName="Overtime"/>
+                            </StackPanel>
+
+                            <TextBlock Text="Is the employee eligible for commission?" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                            <StackPanel Orientation="Horizontal">
+                                <RadioButton Name="rbCoYes" Content="Yes" GroupName="Commission"/>
+                                <RadioButton Name="rbCoNo" Content="No" GroupName="Commission"/>
+                            </StackPanel>
+
+                            <!-- Update Button -->
+                            <Button Content="Update Employee" Click="UpdateButton_Click" Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Width="200" Margin="10,20,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</Page>

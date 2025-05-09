@@ -1,0 +1,38 @@
+﻿<Page x:Class="MerlinAdministrator.Pages.LandingPages.OrganizationManagerLandingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MerlinAdministrator.Pages.LandingPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="810"
+      Title="CatalogManagerLandingPage">
+    
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="White" >
+            <StackPanel>
+                <Button Content="Organization Chart" Width="125" Height="30" Margin="5,15,5,5"  />
+                <Button Click="OnAddDivision_Click" Content="Add Division" Width="125" Height="30" Margin="5,5,5,5"  />
+                <Button Click="OnAddMarket_Click" Content="Add Market" Width="125" Height="30" Margin="5,5,5,5"  />
+                <Button Click="OnAddRegion_Click" Content="Add Region" Width="125" Height="30" Margin="5,5,5,5"  />
+                <Button Click="OnAddDistrict_Click" Content="Add District" Width="125" Height="30" Margin="5,5,5,5"  />
+                <Button Click="OnEditDivision_Click" Content="Edit Division" Width="125" Height="30" Margin="5,5,5,5"  />
+                <Button Click="OnEditMarket_Click" Content="Edit Market" Width="125" Height="30" Margin="5,5,5,5"  />
+                <Button Click="OnEditRegion_Click" Content="Edit Region" Width="125" Height="30" Margin="5,5,5,5"  />
+                <Button Click="OnEditDistrict_Click" Content="Edit District" Width="125" Height="30" Margin="5,5,5,5"  />
+                
+
+
+            </StackPanel>
+        </Border>
+
+        <Frame x:Name="organizationManagerFrame" NavigationUIVisibility="Hidden" Grid.Column="1"/>
+
+    </Grid>
+</Page>

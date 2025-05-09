@@ -1,0 +1,13 @@
+﻿<Window x:Class="MerlinPointOfSale.Windows.DialogWindows.CardRefundWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Refund Payment" Height="450" Width="800">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label Content="Charge ID:"/>
+        <TextBox x:Name="ChargeIdInput" Width="300"/>
+        <Label Content="Refund Amount (optional):"/>
+        <TextBox x:Name="RefundAmountInput" Width="300"/>
+        <Button Content="Process Refund" Click="ProcessRefund_Click"/>
+        <TextBlock x:Name="StatusMessage" Foreground="Red"/>
+    </StackPanel>
+</Window>

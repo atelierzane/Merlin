@@ -1,0 +1,87 @@
+﻿<Window x:Class="MerlinPointOfSale.Windows.DialogWindows.CashPaymentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MerlinPointOfSale.Windows.DialogWindows"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Loaded="Window_Loaded"
+        MouseDown="Window_MouseDown"
+        MouseMove="Window_MouseMove"
+        MouseLeave="Window_MouseLeave"
+        Activated="Window_Activated"
+        Deactivated="Window_Deactivated"
+        WindowStartupLocation="CenterScreen"
+
+        Title="Cash Payment" Height="240" Width="275">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/WindowResources.xaml" />
+                <ResourceDictionary Source="/Style/Animations.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+    <Border x:Name="mainBorder" Style="{StaticResource mainBorderStyle}" Grid.RowSpan="2">
+
+        <Grid x:Name="ContentGrid" Opacity="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.RenderTransform>
+                <TranslateTransform X="0" />
+            </Grid.RenderTransform>
+
+            <Border Style="{StaticResource mainBorderBackground}" Grid.Row="0" Grid.ColumnSpan="2" Opacity=".25"/>
+            <Border Style="{StaticResource mainBorderBackground}" Grid.Row="1" Grid.Column="1" Opacity=".6"/>
+            <Border Style="{StaticResource mainBorderBackground}" Grid.Row="1" Grid.Column="0" Opacity=".85"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,5,0" Opacity=".8" Grid.Column="0" Grid.ColumnSpan="2">
+                <TextBlock Text="Cash Payment" Style="{StaticResource windowTitleText}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,0" Opacity="1" Grid.ColumnSpan="2">
+
+                <Button Style="{StaticResource controlButtonLight_ClosePower}" Click="OnButtonClose_Click">
+                    <fa:IconImage Icon="Close" Style="{StaticResource controlButtonIcon}" Width="11" Height="11"/>
+                </Button>
+            </StackPanel>
+
+            <Rectangle x:Name="glowSeparator" Height="1" Grid.Row="0" Width="1400" HorizontalAlignment="Center" Opacity=".2" Margin="0,39,0,0"/>
+            <Rectangle x:Name="glowSeparatorBG" Height="40" Grid.Row="0" Width="1400" HorizontalAlignment="Center" Opacity=".025" Margin="0,0,0,0" IsHitTestVisible="False" MouseLeave="Window_MouseLeave"/>
+            <Canvas x:Name="glowEffectCanvas" Background="Transparent" IsHitTestVisible="False"/>
+
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Enter Cash Received:" Margin="10,20,0,5" Style="{StaticResource DarkMinimalistButtonText}"/>
+                <TextBox x:Name="txtCashReceived" Margin="5" Style="{StaticResource LightMinimalistSearchBoxStyle}"  VerticalContentAlignment="Center"/>
+
+                <Button Style="{StaticResource LightMinimalistButtonStyle}" Width="155" Margin="0,15,5,5"
+                             Click="ConfirmButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="CheckCircle" Style="{StaticResource LightMinimalistButtonIcon}" />
+                        <TextBlock Text="Confirm" Style="{StaticResource LightMinimalistButtonText}" />
+                    </StackPanel>
+
+                </Button>
+
+                <Button Style="{StaticResource LightMinimalistButtonStyle}" Width="155" Margin="0,0,5,5"
+                             Click="CancelButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="Cancel" Style="{StaticResource LightMinimalistButtonIcon}" />
+                        <TextBlock Text="Cancel" Style="{StaticResource LightMinimalistButtonText}" />
+                    </StackPanel>
+
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,119 @@
+﻿<Page x:Class="MerlinAdministrator.Pages.LocationManagerPages.EditLocationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="EditLocationPage">
+
+    <Border CornerRadius="7,7,5,5" Margin="5,10,5,5">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#C9C9C9" Offset="0"/>
+                <GradientStop Color="#B1B1B1" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Border Grid.Row="0" CornerRadius="5,5,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="{StaticResource HeaderGradientStop1}" Offset="0"/>
+                        <GradientStop Color="{StaticResource HeaderGradientStop2}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="4" Opacity=".5" Direction="275" ShadowDepth="2" />
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Edit Location" Style="{StaticResource PageHeaderTitle}" Margin="10,10,10,5"/>
+                    <TextBlock Text="Search for a location by ID and update its details." 
+                               Style="{StaticResource PageHeaderText}" Margin="10,0,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Body -->
+            <StackPanel Grid.Row="1" Margin="10">
+
+                <!-- Search Section -->
+                <Grid Margin="5,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Location ID:" Style="{StaticResource ControlHeaderText}" VerticalAlignment="Center" Margin="0,10,10,5" Grid.Column="0"/>
+                    <TextBox x:Name="LocationIDTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" Grid.Column="1" VerticalAlignment="Center" Margin="0"/>
+                    <Button Content="Search" Style="{StaticResource LightMinimalistButtonStyle_Short}" Height="35" Width="100" Click="SearchButton_Click" Grid.Column="2" Margin="10,0,0,0"/>
+                </Grid>
+
+                <!-- Editable Fields -->
+                <StackPanel x:Name="LocationEditSection" Visibility="Collapsed">
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Street Address:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <TextBox x:Name="StreetAddressTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="City:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <TextBox x:Name="CityTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="State:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <ComboBox x:Name="StateComboBox" Style="{StaticResource LightMinimalistComboBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Location Phone Number:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <TextBox x:Name="PhoneNumberTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="ZIP Code:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <TextBox x:Name="ZIPTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Manager (Employee ID):" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <ComboBox x:Name="ManagerComboBox" Style="{StaticResource LightMinimalistComboBoxStyle}" IsEditable="True"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Location Type:" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <ComboBox x:Name="LocationTypeComboBox" Style="{StaticResource LightMinimalistComboBoxStyle}">
+                            <ComboBoxItem Content="Store"/>
+                            <ComboBoxItem Content="Warehouse"/>
+                            <ComboBoxItem Content="Office"/>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Is Trade Hold?" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
+                            <RadioButton Name="rbYes" Content="Yes" GroupName="TradeHold" Margin="0,0,10,0"/>
+                            <RadioButton Name="rbNo" Content="No" GroupName="TradeHold"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                        <TextBlock Text="Trade Hold Duration (Days):" Style="{StaticResource ControlHeaderText}" Margin="5,10,0,5"/>
+                        <TextBox x:Name="TradeHoldDurationTextBox" Style="{StaticResource LightMinimalistSearchBoxStyle}" />
+                    </StackPanel>
+
+                    <!-- Update Button -->
+                    <Button Content="Update Location" Style="{StaticResource LightMinimalistButtonStyle_Inventory}" Click="UpdateButton_Click" Width="200" Margin="10,20,0,0"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+    </Border>
+</Page>

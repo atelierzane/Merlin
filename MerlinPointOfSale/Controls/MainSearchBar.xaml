@@ -1,0 +1,138 @@
+﻿<UserControl x:Class="MerlinPointOfSale.Controls.MainSearchBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:local="clr-namespace:MerlinPointOfSale.Controls">
+    <Grid Margin="0,0,0,0">
+        <!-- Background Layers -->
+        <Border Margin="0,0,0,0"
+                CornerRadius="0"
+                Opacity="0"
+                Style="{StaticResource MainSearchBarBackgroundLayer2}" />
+        <Border Margin="0,0,0,0"
+                CornerRadius="0"
+                Style="{StaticResource MainSearchBarBackgroundLayer1}">
+            <fa:IconImage Icon="Search" 
+                          Style="{StaticResource MainSearchBarIcon}" 
+                          Width="18" Height="18" 
+                          HorizontalAlignment="Left" 
+                          Margin="10,0,0,0" />
+        </Border>
+
+
+        <!-- Search Box and Drop-down -->
+        <StackPanel Height="30" Width="465" Margin="35,0,0,0">
+            <TextBox x:Name="SearchBox" Margin="0,-5,0,0"
+                     Style="{StaticResource MainSearchBar}" 
+                     Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                     KeyUp="TextBox_KeyUp"
+                     GotFocus="TextBox_GotFocus" />
+            <Popup x:Name="popup"
+                   IsOpen="{Binding IsPopupOpen}"
+                   Placement="Bottom"
+                   PlacementTarget="{Binding RelativeSource={RelativeSource AncestorType=UserControl}}"
+                   StaysOpen="False"
+                   AllowsTransparency="True"
+                   PopupAnimation="Slide"
+                   HorizontalOffset="{Binding PopupHorizontalOffset}">
+                <Popup.Effect>
+                    <DropShadowEffect BlurRadius="50" Opacity="1" ShadowDepth="10"/>
+                </Popup.Effect>
+                <Border Style="{StaticResource MainSearchBarBackgroundLayer3}" Padding="10" MinWidth="1200" MaxHeight="400">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <!-- Header Row -->
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <!-- SKU Column -->
+                                    <ColumnDefinition Width="150" />
+                                    <!-- Product Name Column -->
+                                    <ColumnDefinition Width="100" />
+                                    <!-- Price Column -->
+                                    <ColumnDefinition Width="100" />
+                                    <!-- Sellable Quantity Column -->
+                                    <ColumnDefinition Width="100" />
+                                    <!-- Defective Quantity Column -->
+                                    <ColumnDefinition Width="100" />
+                                    <!-- CategoryID Column -->
+                                    <ColumnDefinition Width="150" />
+                                    <!-- CategoryName Column -->
+                                    <ColumnDefinition Width="450" />
+                                    <!-- Action Buttons Column -->
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="SKU" Grid.Column="0" HorizontalAlignment="Center"
+                               FontFamily="Inter" FontWeight="Bold" FontSize="14"
+                               Foreground="White" Background="Transparent" />
+                                <TextBlock Text="Product Name" Grid.Column="1" HorizontalAlignment="Center"
+                               FontFamily="Inter" FontWeight="Bold" FontSize="14"
+                               Foreground="White" Background="Transparent" />
+                                <TextBlock Text="Price" Grid.Column="2" HorizontalAlignment="Center"
+                               FontFamily="Inter" FontWeight="Bold" FontSize="14"
+                               Foreground="White" Background="Transparent" />
+                                <TextBlock Text="Sellable Qty" Grid.Column="3" HorizontalAlignment="Center"
+                               FontFamily="Inter" FontWeight="Bold" FontSize="14"
+                               Foreground="White" Background="Transparent" />
+                                <TextBlock Text="Defective Qty" Grid.Column="4" HorizontalAlignment="Center"
+                               FontFamily="Inter" FontWeight="Bold" FontSize="14"
+                               Foreground="White" Background="Transparent" />
+                                <TextBlock Text="Category ID" Grid.Column="5" HorizontalAlignment="Center"
+                               FontFamily="Inter" FontWeight="Bold" FontSize="14"
+                               Foreground="White" Background="Transparent" />
+                                <TextBlock Text="Category Name" Grid.Column="6" HorizontalAlignment="Center"
+                               FontFamily="Inter" FontWeight="Bold" FontSize="14"
+                               Foreground="White" Background="Transparent" />
+                                <TextBlock Text="Actions" Grid.Column="7" HorizontalAlignment="Center"
+                               FontFamily="Inter" FontWeight="Bold" FontSize="14"
+                               Foreground="White" Background="Transparent" />
+                            </Grid>
+
+                            <!-- Data Rows -->
+                            <ItemsControl ItemsSource="{Binding Suggestions}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="5">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="100" />
+                                                <!-- SKU Column -->
+                                                <ColumnDefinition Width="150" />
+                                                <!-- Product Name Column -->
+                                                <ColumnDefinition Width="100" />
+                                                <!-- Price Column -->
+                                                <ColumnDefinition Width="100" />
+                                                <!-- Sellable Quantity Column -->
+                                                <ColumnDefinition Width="100" />
+                                                <!-- Defective Quantity Column -->
+                                                <ColumnDefinition Width="100" />
+                                                <!-- CategoryID Column -->
+                                                <ColumnDefinition Width="150" />
+                                                <!-- CategoryName Column -->
+                                                <ColumnDefinition Width="450" />
+                                                <!-- Action Buttons Column -->
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Style="{StaticResource SuggestionText}" Text="{Binding SKU}" Grid.Column="0" />
+                                            <TextBlock Style="{StaticResource SuggestionText}" Text="{Binding ProductName}" Grid.Column="1" />
+                                            <TextBlock Style="{StaticResource SuggestionText}" Text="{Binding Price, StringFormat=C}" Grid.Column="2" TextAlignment="Right" />
+                                            <TextBlock Style="{StaticResource SuggestionText}" Text="{Binding QuantityOnHandSellable}" Grid.Column="3" TextAlignment="Center" />
+                                            <TextBlock Style="{StaticResource SuggestionText}" Text="{Binding QuantityOnHandDefective}" Grid.Column="4" TextAlignment="Center" />
+                                            <TextBlock Style="{StaticResource SuggestionText}" Text="{Binding CategoryID}" Grid.Column="5" />
+                                            <TextBlock Style="{StaticResource SuggestionText}" Text="{Binding CategoryName}" Grid.Column="6" />
+                                            <StackPanel Grid.Column="7" Orientation="Horizontal" HorizontalAlignment="Center">
+                                                <Button Content="Add to Sale" Click="OnAddToSale_Click" Style="{StaticResource ActionButtonStyle}" />
+                                                <Button Content="Add to Trade" Click="OnAddToTrade_Click" Style="{StaticResource ActionButtonStyle}" />
+                                                <Button Content="Add to Return" Click="OnAddToReturn_Click" Style="{StaticResource ActionButtonStyle}" />
+                                                <Button Content="Pin to Quick Select" Click="OnPinToQuickSelect_Click" Style="{StaticResource ActionButtonStyle}" />
+                                            </StackPanel>
+
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </Popup>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

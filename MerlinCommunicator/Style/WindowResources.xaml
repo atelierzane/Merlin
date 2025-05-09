@@ -1,0 +1,135 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+
+
+
+    <Style x:Key="mainBorderStyle" TargetType="Border">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="1.5" />
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="{StaticResource windowBorderColor_Base_GradientStop1}" Offset="0" />
+                    <GradientStop Color="{StaticResource windowBorderColor_Base_GradientStop2}" Offset="1" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="mainBorderBackground" TargetType="Border">
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="{StaticResource merlinBlack}" Offset="0" />
+                    <GradientStop Color="{StaticResource merlinBlack}" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="mainBorderBackgroundLight" TargetType="Border">
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="{StaticResource merlinWhite}" Offset="0" />
+                    <GradientStop Color="{StaticResource merlinWhite}" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="mainBorderBackgroundLight2" TargetType="Border">
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="#BDEDFF" Offset="0" />
+                    <GradientStop Color="#97E8FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="subBorderBackground" TargetType="Border">
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="{StaticResource merlinBlue}" Offset="0" />
+                    <GradientStop Color= "{StaticResource merlinBlue}" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="blueBorder" TargetType="Border">
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="{StaticResource merlinBlue}" Offset="0" />
+                    <GradientStop Color="{StaticResource merlinBlue}" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="blueBorder_Opaque" TargetType="Border">
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="{StaticResource merlinBlue}" Offset="0" />
+                    <GradientStop Color="{StaticResource merlinBlue}" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="blueBorder_Opaque2" TargetType="Border">
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="{StaticResource windowBackgroundGradientStop1}" Offset="0" />
+                    <GradientStop Color="{StaticResource windowBackgroundGradientStop2}" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="contentGridBackground" TargetType="Grid">
+        <Setter Property="Opacity" Value="0" />
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TranslateTransform X="0" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="IsHitTestVisible" Value="False" />
+        <Setter Property="Opacity" Value="0.25" />
+
+    </Style>
+
+    <Style x:Key="windowTitleText" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="Inter" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Foreground" Value="#F1F1F1"/>
+        <Setter Property="Margin" Value="15,10,10,10" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+
+
+</ResourceDictionary>

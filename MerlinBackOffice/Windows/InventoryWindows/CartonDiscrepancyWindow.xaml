@@ -1,0 +1,32 @@
+﻿<Window x:Class="MerlinBackOffice.Windows.InventoryWindows.CartonDiscrepancyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ResizeMode="NoResize"
+        Background="#C9C9C9"
+        Title="Carton Discrepancy" Height="400" Width="615">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="335*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <DataGrid x:Name="DiscrepancyGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="10,10,10,0" FontFamily="Inter">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="SKU" Binding="{Binding SKU}" Width="100"/>
+                    <DataGridTextColumn Header="Product Name" Binding="{Binding ProductName}" Width="171"/>
+                    <DataGridTextColumn Header="Quantity Expected" Binding="{Binding ProductQuantityShipped}" Width="150"/>
+                    <DataGridTextColumn Header="Quantity Received" Binding="{Binding ProductQuantityReceived}" Width="150"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </Grid>
+        <!-- Button to trigger the input dialog for total received quantity -->
+        <Button Style="{StaticResource LightMinimalistButtonStyle_Inventory}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="30" Grid.Row="1" Click="ConfirmTotalReceived_Click" Margin="440,0,0,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Confirm Total Received" Style="{StaticResource LightMinimalistButtonText}" />
+            </StackPanel>
+        </Button>
+    </Grid>
+
+</Window>

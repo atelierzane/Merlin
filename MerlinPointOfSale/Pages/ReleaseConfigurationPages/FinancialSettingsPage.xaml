@@ -1,0 +1,16 @@
+﻿<Page x:Class="MerlinPointOfSale.Pages.ReleaseConfigurationPages.FinancialSettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="TaxFinancialSettingsPage">
+
+    <Grid Margin="10">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Tax Rate: " Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtTaxRate" Width="50" Height="25"/>
+                <TextBlock Text="%" VerticalAlignment="Center" Margin="5,0,0,0"/>
+            </StackPanel>
+            <Button Content="Save" Width="100" Height="30" HorizontalAlignment="Left" Margin="10,20,0,0" Click="OnSave_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

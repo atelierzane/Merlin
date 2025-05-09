@@ -1,0 +1,218 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zanef\\source\\repos\\Merlin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BCC752-A2D6-4633-B7D8-526B1119146B}|MerlinPollingAgent\\MerlinPollingAgent.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlinpollingagent\\configurationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BCC752-A2D6-4633-B7D8-526B1119146B}|MerlinPollingAgent\\MerlinPollingAgent.csproj|solutionrelative:merlinpollingagent\\configurationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD0FBA7-BAFC-48A8-9756-50522FD60F9E}|MerlinBackOffice\\MerlinBackOffice.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlinbackoffice\\windows\\configurationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DD0FBA7-BAFC-48A8-9756-50522FD60F9E}|MerlinBackOffice\\MerlinBackOffice.csproj|solutionrelative:merlinbackoffice\\windows\\configurationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BCC752-A2D6-4633-B7D8-526B1119146B}|MerlinPollingAgent\\MerlinPollingAgent.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlinpollingagent\\helpers\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BCC752-A2D6-4633-B7D8-526B1119146B}|MerlinPollingAgent\\MerlinPollingAgent.csproj|solutionrelative:merlinpollingagent\\helpers\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD0FBA7-BAFC-48A8-9756-50522FD60F9E}|MerlinBackOffice\\MerlinBackOffice.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlinbackoffice\\windows\\configurationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6DD0FBA7-BAFC-48A8-9756-50522FD60F9E}|MerlinBackOffice\\MerlinBackOffice.csproj|solutionrelative:merlinbackoffice\\windows\\configurationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC87DDAE-5E22-47EC-8359-794E2463BAB7}|MerlinPointOfSale\\MerlinPointOfSale.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlinpointofsale\\windows\\dialogwindows\\dialogwindowspages\\configurationwindowpages\\databasesettingspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC87DDAE-5E22-47EC-8359-794E2463BAB7}|MerlinPointOfSale\\MerlinPointOfSale.csproj|solutionrelative:merlinpointofsale\\windows\\dialogwindows\\dialogwindowspages\\configurationwindowpages\\databasesettingspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC87DDAE-5E22-47EC-8359-794E2463BAB7}|MerlinPointOfSale\\MerlinPointOfSale.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlinpointofsale\\helpers\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC87DDAE-5E22-47EC-8359-794E2463BAB7}|MerlinPointOfSale\\MerlinPointOfSale.csproj|solutionrelative:merlinpointofsale\\helpers\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BCC752-A2D6-4633-B7D8-526B1119146B}|MerlinPollingAgent\\MerlinPollingAgent.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlinpollingagent\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{A7BCC752-A2D6-4633-B7D8-526B1119146B}|MerlinPollingAgent\\MerlinPollingAgent.csproj|solutionrelative:merlinpollingagent\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BCC752-A2D6-4633-B7D8-526B1119146B}|MerlinPollingAgent\\MerlinPollingAgent.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlinpollingagent\\merlinpollingagent.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A7BCC752-A2D6-4633-B7D8-526B1119146B}|MerlinPollingAgent\\MerlinPollingAgent.csproj|solutionrelative:merlinpollingagent\\merlinpollingagent.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD0FBA7-BAFC-48A8-9756-50522FD60F9E}|MerlinBackOffice\\MerlinBackOffice.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlinbackoffice\\merlinbackoffice.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{6DD0FBA7-BAFC-48A8-9756-50522FD60F9E}|MerlinBackOffice\\MerlinBackOffice.csproj|solutionrelative:merlinbackoffice\\merlinbackoffice.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BCC752-A2D6-4633-B7D8-526B1119146B}|MerlinPollingAgent\\MerlinPollingAgent.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlinpollingagent\\configurationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A7BCC752-A2D6-4633-B7D8-526B1119146B}|MerlinPollingAgent\\MerlinPollingAgent.csproj|solutionrelative:merlinpollingagent\\configurationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0596E969-8B64-408D-8B23-2236C8AEC6FA}|Merlin\\MerlinAdministrator.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlin\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0596E969-8B64-408D-8B23-2236C8AEC6FA}|Merlin\\MerlinAdministrator.csproj|solutionrelative:merlin\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0596E969-8B64-408D-8B23-2236C8AEC6FA}|Merlin\\MerlinAdministrator.csproj|c:\\users\\zanef\\source\\repos\\merlin\\merlin\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0596E969-8B64-408D-8B23-2236C8AEC6FA}|Merlin\\MerlinAdministrator.csproj|solutionrelative:merlin\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPollingAgent\\Helpers\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "MerlinPollingAgent\\Helpers\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPollingAgent\\Helpers\\DatabaseHelper.cs",
+              "RelativeToolTip": "MerlinPollingAgent\\Helpers\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T18:55:23.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Settings.settings",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPollingAgent\\Properties\\Settings.settings",
+              "RelativeDocumentMoniker": "MerlinPollingAgent\\Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPollingAgent\\Properties\\Settings.settings",
+              "RelativeToolTip": "MerlinPollingAgent\\Properties\\Settings.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
+              "WhenOpened": "2025-05-09T18:55:13.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MerlinPollingAgent",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPollingAgent\\MerlinPollingAgent.csproj",
+              "RelativeDocumentMoniker": "MerlinPollingAgent\\MerlinPollingAgent.csproj",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPollingAgent\\MerlinPollingAgent.csproj",
+              "RelativeToolTip": "MerlinPollingAgent\\MerlinPollingAgent.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-09T18:55:07.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConfigurationWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPollingAgent\\ConfigurationWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MerlinPollingAgent\\ConfigurationWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPollingAgent\\ConfigurationWindow.xaml.cs",
+              "RelativeToolTip": "MerlinPollingAgent\\ConfigurationWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T18:54:55.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConfigurationWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPollingAgent\\ConfigurationWindow.xaml",
+              "RelativeDocumentMoniker": "MerlinPollingAgent\\ConfigurationWindow.xaml",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPollingAgent\\ConfigurationWindow.xaml",
+              "RelativeToolTip": "MerlinPollingAgent\\ConfigurationWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-09T18:53:42.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\Merlin\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Merlin\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\Merlin\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Merlin\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAOQBAAAAAAAAAAAYwPsBAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T18:51:03.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DatabaseSettingsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPointOfSale\\Windows\\DialogWindows\\DialogWindowsPages\\ConfigurationWindowPages\\DatabaseSettingsPage.xaml.cs",
+              "RelativeDocumentMoniker": "MerlinPointOfSale\\Windows\\DialogWindows\\DialogWindowsPages\\ConfigurationWindowPages\\DatabaseSettingsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPointOfSale\\Windows\\DialogWindows\\DialogWindowsPages\\ConfigurationWindowPages\\DatabaseSettingsPage.xaml.cs",
+              "RelativeToolTip": "MerlinPointOfSale\\Windows\\DialogWindows\\DialogWindowsPages\\ConfigurationWindowPages\\DatabaseSettingsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T18:48:27.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConfigurationWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinBackOffice\\Windows\\ConfigurationWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MerlinBackOffice\\Windows\\ConfigurationWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinBackOffice\\Windows\\ConfigurationWindow.xaml.cs",
+              "RelativeToolTip": "MerlinBackOffice\\Windows\\ConfigurationWindow.xaml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowE8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T18:47:58.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MerlinBackOffice",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinBackOffice\\MerlinBackOffice.csproj",
+              "RelativeDocumentMoniker": "MerlinBackOffice\\MerlinBackOffice.csproj",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinBackOffice\\MerlinBackOffice.csproj",
+              "RelativeToolTip": "MerlinBackOffice\\MerlinBackOffice.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-09T18:46:58.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConfigurationWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinBackOffice\\Windows\\ConfigurationWindow.xaml",
+              "RelativeDocumentMoniker": "MerlinBackOffice\\Windows\\ConfigurationWindow.xaml",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinBackOffice\\Windows\\ConfigurationWindow.xaml",
+              "RelativeToolTip": "MerlinBackOffice\\Windows\\ConfigurationWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-09T18:45:24.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\Merlin\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Merlin\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\Merlin\\MainWindow.xaml",
+              "RelativeToolTip": "Merlin\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-09T18:43:09.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPointOfSale\\Helpers\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "MerlinPointOfSale\\Helpers\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\zanef\\source\\repos\\Merlin\\MerlinPointOfSale\\Helpers\\DatabaseHelper.cs",
+              "RelativeToolTip": "MerlinPointOfSale\\Helpers\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T18:39:02.739Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

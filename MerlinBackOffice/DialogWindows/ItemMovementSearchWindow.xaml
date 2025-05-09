@@ -1,0 +1,58 @@
+﻿<Window x:Class="MerlinBackOffice.DialogWindows.ItemMovementSearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MerlinBackOffice.DialogWindows"
+        mc:Ignorable="d"
+        Title="Item Movement" Height="300" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="SKU/UPC: "
+                    Margin="10,10,0,10"/>
+                <TextBox Width="250"
+                  Margin="10"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Category: "
+                    Margin="10,10,0,10"/>
+                <ComboBox Width="250"
+                  Margin="10"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Start Date: "
+                    Margin="10,10,0,10"/>
+                <DatePicker Width="250"
+                  Margin="10"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="End Date: "
+                    Margin="10,10,1,0"/>
+                <DatePicker Width="250"
+                  Margin="10"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                Orientation="Horizontal"
+                 HorizontalAlignment="Right">
+            <Button Content= "[ESC] Close"
+                 Margin="5"/>
+            <Button Content="[ENTER] Search"
+                 Margin="5"
+                />
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Page x:Class="MerlinAdministrator.Pages.LandingPages.InventoryManagerLandingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MerlinAdministrator.Pages.LandingPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="810"
+      Title="InventoryManagerLandingPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="White" >
+            <StackPanel>
+                <Button Content="Inventory Search" Width="125" Height="30" Margin="5,15,5,5" Click="OnBtnInventorySearch_Click"/>
+                <Button Content="Item Movement" Width="125" Height="30" Margin="5" />
+                <Button Content="Add Carton" Width="125" Height="30" Margin="5" Click="OnBtnAddCarton_Click" />
+                <Button Content="Carton Search" Width="125" Height="30" Margin="5" Click="OnBtnCartonSearch_Click" />
+                <Button Content="Edit Carton" Width="125" Height="30" Margin="5" Click="OnBtnEditCarton_Click" />
+                <Button Content="Remove Carton" Width="125" Height="30" Margin="5" Click="OnBtnRemoveCarton_Click" />
+                <Button Content="Bulk Remove Carton" Width="125" Height="30" Margin="5" Click="OnBtnBulkRemoveCarton_Click" />
+
+            </StackPanel>
+        </Border>
+
+        <Frame x:Name="inventoryManagerFrame" NavigationUIVisibility="Hidden" Grid.Column="1"/>
+
+    </Grid>
+</Page>

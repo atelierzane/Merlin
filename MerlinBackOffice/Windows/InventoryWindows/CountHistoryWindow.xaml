@@ -1,0 +1,85 @@
+﻿<Window x:Class="MerlinBackOffice.Windows.InventoryWindows.CountHistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Background="#C9C9C9"
+        Title="Counts History" Height="650" Width="875"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="55" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1">
+            <Button x:Name="btnViewCountDetails"
+                    Click="btnViewCountDetails_Click"
+                    Style="{StaticResource LightMinimalistButtonStyle_Inventory}" 
+                    Width="185" Margin="5,10,0,5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="View Count Details" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnPrintReport"
+                    Style="{StaticResource LightMinimalistButtonStyle_Inventory}" 
+                    Width="185" Margin="5,10,0,5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Print Report" Style="{StaticResource LightMinimalistButtonText}" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <!-- Counts List -->
+        <ListView Name="lvCounts" 
+               Margin="10,10,10,10"
+               FontFamily="Inter"
+               FontWeight="Regular"
+               Grid.Row="1"
+               Grid.Column="1"
+               Grid.RowSpan="2"
+               SelectionChanged="lvCounts_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Count ID" 
+                                 DisplayMemberBinding="{Binding CountID}" 
+                                 Width="120">
+                    </GridViewColumn>
+                    <GridViewColumn Header="Count Type" 
+                                 DisplayMemberBinding="{Binding CountType}" 
+                                 Width="120"/>
+                    <GridViewColumn Header="Category" Width="120">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding CountCategory}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Completed Date" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding CompletedDate, StringFormat={}{0:yyyy-MM-dd}}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Employee" 
+                                 DisplayMemberBinding="{Binding CompletedByEmployee}" 
+                                 Width="120"/>
+                    <GridViewColumn Header="Accuracy (%)" 
+                                 DisplayMemberBinding="{Binding Accuracy}" 
+                                 Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

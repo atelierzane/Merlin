@@ -1,0 +1,181 @@
+﻿<Window x:Class="MerlinPointOfSale.Windows.DialogWindows.CustomerSearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:winex="https://github.com/yariker/WindowExtras.Wpf"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        xmlns:local="clr-namespace:MerlinPointOfSale.Controls"
+        Height="800"
+        Width="1400"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Loaded="MainWindow_Loaded"
+        WindowStartupLocation="CenterScreen"
+        x:Name="mainWindow">
+
+    <!-- Window Shadow using WindowExtras -->
+    <winex:WindowEx.WindowShadow>
+        <winex:WindowShadow x:Name="shadow" OffsetX="0" OffsetY="0" Opacity=".55" Radius="25"/>
+    </winex:WindowEx.WindowShadow>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Merge existing external dictionaries -->
+                <ResourceDictionary Source="/Style/Colors.xaml"/>
+                <ResourceDictionary Source="/Style/WindowResources.xaml" />
+                <ResourceDictionary Source="/Style/ButtonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <!-- Main Content -->
+    <Grid x:Name="mainGrid">
+        <Grid.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Grid.RenderTransform>
+        <Border x:Name="mainBorder" 
+                Style="{StaticResource mainBorderStyle}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="0">
+            <Border.Background>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Border.Background>
+        </Border>
+
+        <Grid x:Name="ContentGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RenderTransform>
+                <TranslateTransform X="0" Y="0"/>
+            </Grid.RenderTransform>
+
+
+            <Border x:Name="titleBarBg" Style="{StaticResource mainBorderBackground}" Grid.Row="0" Grid.ColumnSpan="2"  Opacity=".225" Margin="1.5,1.5,1.5,0"/>
+            <Border x:Name="mainBg" Style="{StaticResource mainBorderBackground}" Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Opacity=".675" Margin="1.5,0,1.5,1.5"/>
+
+            <!-- Glow Separator -->
+            <Rectangle x:Name="glowSeparator" Height="1" Grid.Row="0" Grid.ColumnSpan="2" Width="1600" HorizontalAlignment="Center" Opacity=".325" Margin="0,39,0,0"/>
+            <Rectangle x:Name="glowSeparatorBG" Height="40" Grid.Row="0" Grid.ColumnSpan="2" Width="1600" HorizontalAlignment="Center" Opacity=".045" Margin="0,0,0,0" IsHitTestVisible="False"/>
+
+            <Canvas x:Name="glowEffectCanvas" Background="Transparent" Grid.ColumnSpan="2" IsHitTestVisible="False"/>
+            <ContentPresenter Content="{Binding}" Grid.Row="1"/>
+
+            <!-- Search Input -->
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10,5,5,5">
+                <TextBox x:Name="txtSearchCustomer" Style="{StaticResource LightMinimalistSearchBoxStyle}" Width="300" Margin="5" Text="Enter customer name, phone, or email"/>
+
+                <Button Style="{StaticResource LightMinimalistButtonStyle}" Width="100" Margin="5,5,5,5"
+                             Click="OnSearchCustomer_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Search" Style="{StaticResource LightMinimalistButtonText}" />
+                    </StackPanel>
+                </Button>
+                
+            </StackPanel>
+            <DataGrid x:Name="dgCustomerResults"
+          Grid.Row="2"
+          AutoGenerateColumns="False"
+          SelectionMode="Single"
+          SelectionUnit="FullRow"
+          Margin="15,5,15,5"
+          Background="Transparent"
+          GridLinesVisibility="None"
+          BorderBrush="#00C6FF"
+          BorderThickness="0,1,0,0"
+          HeadersVisibility="Column"
+          PreviewMouseLeftButtonDown="dgCustomerResults_PreviewMouseLeftButtonDown">
+                <DataGrid.Resources>
+                    <!-- DataGrid Row Style -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="FontFamily" Value="Inter" />
+                        <Setter Property="FontSize" Value="14" />
+                        <Setter Property="BorderBrush" Value="Transparent" />
+                        <Setter Property="Margin" Value="0,5,0,5" />
+                        <!-- Highlight Entire Row When Selected -->
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#0056b3" />
+                                <!-- Light Blue Background -->
+                                <Setter Property="Foreground" Value="White" />
+                                <!-- White Text -->
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <!-- DataGrid Cell Style -->
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="FontFamily" Value="Inter" />
+                        <Setter Property="FontSize" Value="14" />
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                        <!-- Disable focus visuals -->
+                        <Setter Property="BorderThickness" Value="0" />
+                        <!-- Remove cell borders -->
+                    </Style>
+
+                    <!-- DataGrid Header Style -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Foreground" Value="#FFFFFF" />
+                        <Setter Property="FontFamily" Value="Inter" />
+                        <Setter Property="FontWeight" Value="Bold" />
+                        <Setter Property="FontSize" Value="14" />
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="BorderBrush" Value="#00C6FF" />
+                        <Setter Property="BorderThickness" Value="0,0,0,1" />
+                        <Setter Property="Padding" Value="10,15,10,15" />
+                    </Style>
+                </DataGrid.Resources>
+
+                <!-- Define Columns -->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Customer ID" Binding="{Binding CustomerID}" Width="100" />
+                    <DataGridTextColumn Header="First Name" Binding="{Binding CustomerFirstName}" Width="150" />
+                    <DataGridTextColumn Header="Last Name" Binding="{Binding CustomerLastName}" Width="150" />
+                    <DataGridTextColumn Header="Phone" Binding="{Binding CustomerPhoneNumber}" Width="120" />
+                    <DataGridTextColumn Header="Email" Binding="{Binding CustomerEmail}" Width="200" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+
+
+            <!-- Confirm/Cancel buttons -->
+            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,5,10,10">
+                <Button Style="{StaticResource LightMinimalistButtonStyle}" Width="100" Margin="5,5,5,5"
+                             Click="OnCancel_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Cancel" Style="{StaticResource LightMinimalistButtonText}" />
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource LightMinimalistButtonStyle}" Width="100" Margin="5,5,5,5"
+                             Click="OnSelectCustomer_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Select" Style="{StaticResource LightMinimalistButtonText}" />
+                    </StackPanel>
+                </Button>
+
+
+            </StackPanel>
+ 
+           <local:DialogWindowTitleBar x:Name="windowTitleBar" Title="Dynamic Title - Merlin ROS" Grid.Row="0" Grid.ColumnSpan="2"/>
+            
+        </Grid>
+    </Grid>
+</Window>

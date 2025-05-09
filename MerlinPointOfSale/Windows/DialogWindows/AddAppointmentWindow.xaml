@@ -1,0 +1,110 @@
+﻿<Window x:Class="MerlinPointOfSale.Windows.DialogWindows.AddAppointmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:winex="https://github.com/yariker/WindowExtras.Wpf"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        xmlns:local="clr-namespace:MerlinPointOfSale.Controls"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddAppointmentWindow"
+        Height="800"
+        Width="550"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Loaded="MainWindow_Loaded"
+        WindowStartupLocation="CenterScreen"
+        x:Name="mainWindow">
+
+    <winex:WindowEx.WindowShadow>
+        <winex:WindowShadow x:Name="shadow" OffsetX="0" OffsetY="1.5" Opacity="0" Radius="35"/>
+    </winex:WindowEx.WindowShadow>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/Colors.xaml"/>
+                <ResourceDictionary Source="/Style/WindowResources.xaml" />
+                <ResourceDictionary Source="/Style/ButtonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Border x:Name="mainBorder" 
+           Style="{StaticResource mainBorderStyle}"
+           HorizontalAlignment="Stretch"
+           VerticalAlignment="Stretch"
+           Margin="0">
+            <Border.Background>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Border.Background>
+        </Border>
+
+        <Grid x:Name="ContentGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.RenderTransform>
+                <TranslateTransform X="0" />
+            </Grid.RenderTransform>
+
+            <Border x:Name="titleBarBg" Style="{StaticResource mainBorderBackground}" Grid.Row="0" Opacity=".225" Margin="1.5,1.5,1.5,0"/>
+            <Border x:Name="mainBg" Style="{StaticResource mainBorderBackground}" Grid.Row="1" Opacity=".675" Margin="1.5,0,1.5,1.5"/>
+
+            <Rectangle x:Name="glowSeparator" Height="1" Grid.Row="0" Width="1600" HorizontalAlignment="Center" Opacity=".375" Margin="0,39,0,0"/>
+            <Rectangle x:Name="glowSeparatorBG" Height="40" Grid.Row="0" Width="1600" HorizontalAlignment="Center" Opacity=".065" Margin="0,0,0,0" IsHitTestVisible="False"/>
+
+            <Canvas x:Name="glowEffectCanvas" Background="Transparent" Grid.Row="0" IsHitTestVisible="False"/>
+            <local:DialogWindowTitleBar x:Name="windowTitleBar" Title="Add Appointment" Grid.Row="0"/>
+
+            <ScrollViewer Grid.Row="1">
+                <StackPanel Margin="30">
+                    <TextBlock Text="Customer Information" FontWeight="Bold" FontSize="14" Margin="0,10,0,10" Style="{StaticResource DarkMinimalistButtonText}"/>
+
+                    <TextBlock Text="First Name:" Style="{StaticResource DarkMinimalistButtonText}"/>
+                    <TextBox x:Name="CustomerFirstNameTextBox" Margin="0,5,0,10"  Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <TextBlock Text="Last Name:" Style="{StaticResource DarkMinimalistButtonText}"/>
+                    <TextBox x:Name="CustomerLastNameTextBox" Margin="0,5,0,10"  Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <TextBlock Text="Phone Number:" Style="{StaticResource DarkMinimalistButtonText}"/>
+                    <TextBox x:Name="CustomerPhoneNumberTextBox" Margin="0,5,0,10"  Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <TextBlock Text="Email:" Style="{StaticResource DarkMinimalistButtonText}"/>
+                    <TextBox x:Name="CustomerEmailTextBox" Margin="0,5,0,20" Style="{StaticResource LightMinimalistSearchBoxStyle}"/>
+
+                    <TextBlock Text="Appointment Details" FontWeight="Bold" FontSize="14" Margin="0,10,0,10" Style="{StaticResource DarkMinimalistButtonText}"/>
+
+                    <TextBlock Text="Date:" Style="{StaticResource DarkMinimalistButtonText}"/>
+                    <DatePicker x:Name="AppointmentDatePicker" Margin="0,5,0,10" />
+
+                    <TextBlock Text="Time:" Style="{StaticResource DarkMinimalistButtonText}"/>
+                    <ComboBox x:Name="AppointmentTimeComboBox" Margin="0,5,0,10" IsEditable="False"/>
+
+                    <TextBlock Text="Employee:" Style="{StaticResource DarkMinimalistButtonText}"/>
+                    <ComboBox x:Name="EmployeeComboBox" DisplayMemberPath="FullName" SelectedValuePath="EmployeeID" Margin="0,5,0,10" />
+
+                    <TextBlock Text="Services:" Style="{StaticResource DarkMinimalistButtonText}"/>
+                    <ListBox x:Name="ServicesListBox" DisplayMemberPath="ServiceName" SelectedValuePath="ServiceID" SelectionMode="Multiple" Margin="0,5,0,10" Height="100"/>
+
+                    <TextBlock Text="Add-Ons:" Style="{StaticResource DarkMinimalistButtonText}"/>
+                    <ListBox x:Name="AddOnsListBox" DisplayMemberPath="ServicePlusName" SelectedValuePath="ServicePlusID" SelectionMode="Multiple" Margin="0,5,0,10"  Height="100"/>
+
+                    <TextBlock Text="Fees:" Style="{StaticResource DarkMinimalistButtonText}"/>
+                    <ListBox x:Name="FeesListBox" DisplayMemberPath="ServiceFeeName" SelectedValuePath="ServiceFeeID" SelectionMode="Multiple" Margin="0,5,0,20"  Height="100"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+
+
+                        <Button Style="{StaticResource LightMinimalistButtonStyle}" Width="150" Margin="5,5,5,5" Click="SaveAppointmentButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Save Appointment" Style="{StaticResource LightMinimalistButtonText}" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
